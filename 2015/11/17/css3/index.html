@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | 梁弼杰的博客</title>
+  <title>css input那些事儿 | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梁弼杰的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2015/index.html">
+  <meta name="description" content="使用下拉框（selected 搭配option）
+    爱好:          看书      旅游      运动      购物    在select里面设置multiple=”multiple”属性，就可以实现多选了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css input那些事儿">
+<meta property="og:url" content="http://yoursite.com/2015/11/17/css3/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description">
+<meta property="og:description" content="使用下拉框（selected 搭配option）
+    爱好:          看书      旅游      运动      购物    在select里面设置multiple=”multiple”属性，就可以实现多选了。">
+<meta property="og:updated_time" content="2015-11-17T11:59:12.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梁弼杰的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="css input那些事儿">
+<meta name="twitter:description" content="使用下拉框（selected 搭配option）
+    爱好:          看书      旅游      运动      购物    在select里面设置multiple=”multiple”属性，就可以实现多选了。">
   
     <link rel="alternative" href="/atom.xml" title="梁弼杰的博客" type="application/atom+xml">
   
@@ -199,235 +203,124 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-css3" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2015/11/17/css3/" class="article-date">
+  	<time datetime="2015-11-17T11:59:12.230Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css input那些事儿
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/javascript1/" class="archive-article-date">
-  	<time datetime="2015-11-17T12:27:00.127Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/javascript1/">JavaScript笔记</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用下拉框（selected_搭配option）">使用下拉框（selected 搭配option）</h2><blockquote>
+<form action="save.php" method="post"><br>    <label>爱好:</label><br>    <select><br>      <option value="看书">看书</option><br>      <option value="旅游" selected="selected">旅游</option><br>      <option value="运动">运动</option><br>      <option value="购物">购物</option><br>    </select><br></form><br>在select里面设置multiple=”multiple”属性，就可以实现多选了。<br><a id="more"></a><br>## 提交按钮<br><form method="post" action="save.php"><br>    <label for="myName">姓名：</label><br>    <input type="text" value=" " name="myName "><br>    <input type="submit" value="提交" name="submitBtn"><br></form>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+</blockquote>
+<h2 id="使输入框恢复到初始状态。只需要把type设置为”reset”就可以。">使输入框恢复到初始状态。只需要把type设置为”reset”就可以。</h2><blockquote>
+<form action="save.php" method="post"><br>    <label>爱好:</label><br>    <select><br>      <option value="看书">看书</option><br>      <option value="旅游" selected="selected">旅游</option><br>      <option value="运动">运动</option><br>      <option value="购物">购物</option><br>    </select><br>    <input type="submit" value="确定"><br>    <input type="reset" value="重置"><br></form>
+
+</blockquote>
+<h2 id="label的使用">label的使用</h2><p>label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。</p>
+<blockquote>
+<form><br>  <label for="male">男</label><br>  <input type="radio" name="gender" id="male"><br>  <br><br>  <label for="female">女</label><br>  <input type="radio" name="gender" id="female"><br>  <br><br>  <label for="email">输入你的邮箱地址<br>  <input type="email" id="email" placeholder="Enter email"><br></label></form>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/17/css2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CSS元素类型那些事儿
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/17/css1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS盒子模型那些事儿</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css2/" class="archive-article-date">
-  	<time datetime="2015-11-17T12:21:14.137Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css2/">CSS元素类型那些事儿</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="css3" data-title="css input那些事儿" data-url="http://yoursite.com/2015/11/17/css3/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css3/" class="archive-article-date">
-  	<time datetime="2015-11-17T11:59:12.230Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css3/">css input那些事儿</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css1/" class="archive-article-date">
-  	<time datetime="2015-11-17T11:38:13.939Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css1/">CSS盒子模型那些事儿</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/github_build/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:07:33.023Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/github_build/">github手把手教你建个人主页并且绑定自己的域名</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/hello-world/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:06:23.516Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/MyFirst/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:05:58.343Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/MyFirst/">markdown的语法熟悉</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mardownx/">mardownx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -453,8 +346,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

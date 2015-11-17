@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | 梁弼杰的博客</title>
+  <title>CSS盒子模型那些事儿 | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梁弼杰的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2015/index.html">
+  <meta name="description" content="盒子模型介绍
+块标签都具备盒子模型的特征
+宽度width和高度height：盒模型的高度宽度与平时理解不同，一个元素实际宽度（盒子的宽度）=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距。高度类似。 不设置情况下，默认为父容器的100%。
+填充padding：元素内容与边框之间的距离。按顺时针设置上、右、下、左 div{ padding:2px 4px 1px 5px; } 或 上下左右">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS盒子模型那些事儿">
+<meta property="og:url" content="http://yoursite.com/2015/11/17/css1/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description">
+<meta property="og:description" content="盒子模型介绍
+块标签都具备盒子模型的特征
+宽度width和高度height：盒模型的高度宽度与平时理解不同，一个元素实际宽度（盒子的宽度）=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距。高度类似。 不设置情况下，默认为父容器的100%。
+填充padding：元素内容与边框之间的距离。按顺时针设置上、右、下、左 div{ padding:2px 4px 1px 5px; } 或 上下左右">
+<meta property="og:updated_time" content="2015-11-17T11:38:13.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梁弼杰的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="CSS盒子模型那些事儿">
+<meta name="twitter:description" content="盒子模型介绍
+块标签都具备盒子模型的特征
+宽度width和高度height：盒模型的高度宽度与平时理解不同，一个元素实际宽度（盒子的宽度）=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距。高度类似。 不设置情况下，默认为父容器的100%。
+填充padding：元素内容与边框之间的距离。按顺时针设置上、右、下、左 div{ padding:2px 4px 1px 5px; } 或 上下左右">
   
     <link rel="alternative" href="/atom.xml" title="梁弼杰的博客" type="application/atom+xml">
   
@@ -199,235 +209,118 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-css1" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2015/11/17/css1/" class="article-date">
+  	<time datetime="2015-11-17T11:38:13.939Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS盒子模型那些事儿
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/javascript1/" class="archive-article-date">
-  	<time datetime="2015-11-17T12:27:00.127Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/javascript1/">JavaScript笔记</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="盒子模型介绍">盒子模型介绍</h2><ul>
+<li>块标签都具备盒子模型的特征</li>
+<li>宽度width和高度height：盒模型的高度宽度与平时理解不同，一个元素实际宽度（盒子的宽度）=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距。高度类似。 不设置情况下，默认为父容器的100%。</li>
+<li>填充padding：元素内容与边框之间的距离。按顺时针设置上、右、下、左 div{ padding:2px 4px 1px 5px; } 或 上下左右填充都相同{ padding:5px; } 或 上下、左右分别相同 { padding:2px 4px; }<a id="more"></a>
+<h2 id="边框">边框</h2>div{border：2px solid red}等同于<br>div{<br>  border-width:2px;<br>  border-style:solid;       //参数有：dashed(虚线)dotted(点线)solid(实线)<br>  border-color:red;<br>}</li>
+</ul>
+<h2 id="盒子大小的计算">盒子大小的计算</h2><p>一个盒子实际的宽度=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距<br>如果我们设置一个块级元素的width的值为100px，则这个块级元素的宽度不一定是100px，这个盒子模型的宽度实际宽度还要加上内边距、边框宽度和外边距的两倍。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/17/css3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          css input那些事儿
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/17/github_build/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">github手把手教你建个人主页并且绑定自己的域名</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css2/" class="archive-article-date">
-  	<time datetime="2015-11-17T12:21:14.137Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css2/">CSS元素类型那些事儿</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="css1" data-title="CSS盒子模型那些事儿" data-url="http://yoursite.com/2015/11/17/css1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css3/" class="archive-article-date">
-  	<time datetime="2015-11-17T11:59:12.230Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css3/">css input那些事儿</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/css1/" class="archive-article-date">
-  	<time datetime="2015-11-17T11:38:13.939Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/css1/">CSS盒子模型那些事儿</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/github_build/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:07:33.023Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/github_build/">github手把手教你建个人主页并且绑定自己的域名</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/hello-world/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:06:23.516Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/17/MyFirst/" class="archive-article-date">
-  	<time datetime="2015-11-17T07:05:58.343Z" itemprop="datePublished">Nov 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/17/MyFirst/">markdown的语法熟悉</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mardownx/">mardownx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -453,8 +346,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

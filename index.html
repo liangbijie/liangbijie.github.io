@@ -201,6 +201,95 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-css4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/17/css4/" class="article-date">
+  	<time datetime="2015-11-17T13:57:56.505Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/17/css4/">css 布局模型那些事儿</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="元素的三种布局模型">元素的三种布局模型</h2><ul>
+<li>流动模型(Flow)</li>
+<li>浮动模型(Float)</li>
+<li>层模型(Layer)</li>
+</ul>
+<h3 id="流动模型">流动模型</h3><h4 id="流动模型介绍">流动模型介绍</h4><p>流动模型是网页中默认的布局模式，即在默认状态下的HTML网页元素都是根据流动模型来分布网页内容的。</p>
+<h4 id="流动模型特点">流动模型特点</h4><ul>
+<li>块状元素会在所处的包含元素内自上向下垂直分布（默认状态下，即块状元素的霸道属性）</li>
+<li>内联元素会在所处的包含元素内从左到有水平分布</li>
+</ul>
+<h3 id="浮动模型">浮动模型</h3><h4 id="浮动模型介绍">浮动模型介绍</h4><p>元素浮动会使块状元素不会独霸一行</p>
+<h4 id="浮动元素写法">浮动元素写法</h4><blockquote>
+<p>float:left;<br>float:right;</p>
+</blockquote>
+<h3 id="层模型">层模型</h3><h4 id="层模型介绍">层模型介绍</h4><p>层模型就像 ps图层(幸好学过ps，对此比较了解)一样</p>
+<h4 id="层模型类型">层模型类型</h4><ul>
+<li>绝对定位(position:absolute)<ul>
+<li>会从文档流脱离出来</li>
+<li>可以用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位（如果不存在，则以body为父元素）</li>
+</ul>
+</li>
+<li>相对定位(position:relative)<ul>
+<li>没有脱离文档流</li>
+<li>通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。</li>
+<li>相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。</li>
+</ul>
+</li>
+<li>固定定位(position:fixed) 被固定到了屏幕上了<ul>
+<li>与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身</li>
+<li>不会随浏览器窗口的滚动条滚动而变化</li>
+<li>固定定位的元素会始终位于浏览器窗口内视图的某个位置</li>
+<li>不会受文档流动影响</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-javascript1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

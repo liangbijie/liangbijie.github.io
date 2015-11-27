@@ -102,16 +102,16 @@ require([], function (){
 		
 	}
 	
-	//是否加载ins
-	if($("#post-instagram").length != 0){
-		require(['/js/instagram.js', '/js/jquery.lazyload.js'], function(ins){
-			ins.init();
-		});
-	}
-
 	//是否新窗口打开链接
 	if(yiliaConfig.open_in_new == true){
 		$(".article a[href]").attr("target", "_blank")
 	}
-	
+
+	//随机颜色
+	var colorList = ["#6da336", "#ff945c", "#66CC66", "#99CC99", "#CC6666", "#76becc", "#c99979", "#918597", "#4d4d4d"];
+	var id = Math.ceil(Math.random()*(colorList.length-1));
+	//PC
+	$("#container .left-col .overlay").css({"background-color": colorList[id],"opacity": .3});
+	//移动端
+	$("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .7});
 });

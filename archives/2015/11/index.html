@@ -15,8 +15,6 @@
 <meta name="twitter:title" content="梁弼杰的博客">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="梁弼杰的博客" type="application/atom+xml">
-  
   
     <link rel="icon" href="/favicon.png">
   
@@ -41,6 +39,8 @@
 		</hgroup>
 
 		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
 				
 
 
@@ -105,11 +105,9 @@
 					<nav class="header-nav">
 						<ul class="social">
 							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
-					        
 								<li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
 					        
-								<li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
 						</ul>
 					</nav>
@@ -181,11 +179,9 @@
 			<nav class="header-nav">
 						<ul class="social">
 							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
-					        
 								<li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
 					        
-								<li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
 						</ul>
 			</nav>
@@ -498,12 +494,23 @@
 <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="/js/main.js" type="text/javascript"></script>
 
-<script>
-  var backgroundnum = 5;
-  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-
-  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-</script>
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
 
 
 

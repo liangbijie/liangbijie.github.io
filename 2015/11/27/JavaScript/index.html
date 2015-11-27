@@ -16,8 +16,6 @@
 <meta name="twitter:title" content="JavaScript笔记">
 <meta name="twitter:description" content="自我剖析反省我感觉现在学知识有点浮躁，恨不得很快就把一门知识掌握，比如现在:JavaScript还刚看一遍就急急忙忙的去学jQuery、json、bootstrap而且总是半途而废，每天看着总是忙忙碌碌的，但最终感觉自己并没有学多少东西，所以从现在开始我要开始沉下心来学习了，为了解决我每次看书看多少忘多少的问题，我准备用写心得体会的方式来解决这个问题，不知道这个办法有木有用，但是至少能让我浮躁的心">
   
-    <link rel="alternative" href="/atom.xml" title="梁弼杰的博客" type="application/atom+xml">
-  
   
     <link rel="icon" href="/favicon.png">
   
@@ -42,6 +40,8 @@
 		</hgroup>
 
 		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
 				
 
 
@@ -106,11 +106,9 @@
 					<nav class="header-nav">
 						<ul class="social">
 							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
-					        
 								<li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
 					        
-								<li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
 						</ul>
 					</nav>
@@ -182,11 +180,9 @@
 			<nav class="header-nav">
 						<ul class="social">
 							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
-					        
 								<li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
 					        
-								<li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
 						</ul>
 			</nav>
@@ -437,12 +433,23 @@
 <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="/js/main.js" type="text/javascript"></script>
 
-<script>
-  var backgroundnum = 5;
-  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-
-  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-</script>
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
 
 
 

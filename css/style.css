@@ -138,9 +138,8 @@ body,
 }
 body {
   font-family: "微软雅黑", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   background: #fff;
-  color: rgba(0,0,0,0.6);
   -webkit-overflow-scrolling: touch;
 }
 h1,
@@ -247,8 +246,8 @@ a {
   width: 100%;
   height: 180px;
   background-color: #000;
-  position: absolute;
   opacity: 0.7;
+  position: absolute;
 }
 #container .left-col .intrude-less {
   width: 76%;
@@ -258,6 +257,7 @@ a {
 #container .left-col li:hover {
   background: none;
   font-weight: bold;
+  color: #48c9b0;
 }
 #container .mid-col {
   position: absolute;
@@ -916,7 +916,6 @@ a {
   outline: none;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  opacity: 0.32;
   font-family: inherit;
   -webkit-appearance: none;
 }
@@ -951,7 +950,6 @@ a {
   margin: 0 30px;
   padding-right: 1.5em;
   border-bottom: 1px solid #eee;
-  background: #fff;
 }
 .archives-wrap:first-child {
   margin-top: 30px;
@@ -973,11 +971,13 @@ a {
 }
 .archives {
   position: relative;
+  background-color: #fff;
 }
 .archives .article-info {
   border: none;
 }
 .archives .archive-article {
+  background-color: #fff;
   margin-left: 160px;
   padding: 0.5em 0;
   border-bottom: 1px solid #eee;
@@ -1000,7 +1000,7 @@ a {
   transition: color 0.3s;
 }
 .archives .archive-article-title:hover {
-  color: #657b83;
+  color: #48c9b0;
 }
 .archives .archive-article-title span {
   display: block;
@@ -1081,7 +1081,7 @@ a {
   font-size: 12px;
 }
 .archives-wrap {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.8);
 }
 .archives-wrap .archives {
   background: transparent;
@@ -1165,8 +1165,8 @@ body {
 }
 .article-title {
   color: #696969;
+  font-family: 'microsoft yahei', Verdana, Geneva, sans-serif;
   margin-left: 0px;
-  font-weight: 300;
   line-height: 35px;
   margin-bottom: 20px;
   font-size: 26px;
@@ -1179,7 +1179,7 @@ body {
   transition: color 0.3s;
 }
 .article-title:hover {
-  color: #b0a0aa;
+  color: #48c9b0;
 }
 .article-inner {
   position: relative;
@@ -1188,11 +1188,11 @@ body {
   word-break: break-word;
 }
 .article-header {
-  border-left: 6px solid #eee;
+  border-left: 6px solid #696969;
   padding: 15px 8.2em 15px 25px;
 }
 .article-header:hover {
-  border-left: 5px solid #9c9;
+  border-left: 5px solid #48c9b0;
 }
 .article-info li:hover {
   background: none;
@@ -1272,27 +1272,18 @@ body {
 }
 .article-entry h1 {
   margin-top: 30px;
+  font-weight: bold;
 }
 .article-entry h2 {
-  margin: 0.5em auto;
+  margin-top: 20px;
   font-weight: bold;
-  color: #9c9;
+  color: #574c4c;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-.article-entry h2:hover {
-  color: #88acdb;
-}
-.article-entry h2::before,
-.article-entry h2::after {
-  content: " —— ";
 }
 .article-entry h3 {
   margin: 0.5em auto;
   color: #438aac;
-  background: rgba(243,248,253,0.6);
-  border: 1px solid #d2e8fa;
   padding: 0.2em 0.6em;
   font-weight: normal;
 }
@@ -1401,7 +1392,7 @@ body {
   float: right;
 }
 .article-more-link a {
-  background: #88acdb;
+  background: #000;
   color: #fff;
   font-size: 0.9em;
   padding: 2px 4px;
@@ -1417,7 +1408,7 @@ body {
   opacity: 0.6;
 }
 .article-more-link a:hover {
-  background: #9c9;
+  background: #000;
   opacity: 1;
 }
 .article-more-link a.hidden {
@@ -1722,7 +1713,6 @@ li:hover {
   margin: 0 30px;
   padding-right: 1.5em;
   border-bottom: 1px solid #eee;
-  background: #fff;
 }
 .archives-wrap:first-child {
   margin-top: 30px;
@@ -1744,11 +1734,13 @@ li:hover {
 }
 .archives {
   position: relative;
+  background-color: #fff;
 }
 .archives .article-info {
   border: none;
 }
 .archives .archive-article {
+  background-color: #fff;
   margin-left: 160px;
   padding: 0.5em 0;
   border-bottom: 1px solid #eee;
@@ -1771,7 +1763,7 @@ li:hover {
   transition: color 0.3s;
 }
 .archives .archive-article-title:hover {
-  color: #657b83;
+  color: #48c9b0;
 }
 .archives .archive-article-title span {
   display: block;
@@ -1852,7 +1844,7 @@ li:hover {
   font-size: 12px;
 }
 .archives-wrap {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.8);
 }
 .archives-wrap .archives {
   background: transparent;
@@ -2044,7 +2036,6 @@ pre .javascript .function {
   text-shadow: 0 1px #fff;
   position: absolute;
   bottom: 20px;
-  opacity: 0.75;
   width: 100%;
   text-align: center;
 }
@@ -2191,7 +2182,6 @@ pre .javascript .function {
   -moz-transition: all 0.15s ease-out 0.1s;
   -ms-transition: all 0.15s ease-out 0.1s;
   transition: all 0.15s ease-out 0.1s;
-  opacity: 0.2;
   cursor: pointer;
   display: block;
 }

@@ -6,25 +6,16 @@
     <!-- 下面一行意思是 梁弼杰的博客 -->
   <title>css 布局模型那些事儿 | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="元素的三种布局模型
-流动模型(Flow)
-浮动模型(Float)
-层模型(Layer)">
+  <meta name="description" content="导读：看慕课网关于布局的一些笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css 布局模型那些事儿">
-<meta property="og:url" content="http://yoursite.com/2015/11/27/css /index.html">
+<meta property="og:url" content="http://yoursite.com/2015/11/30/css /index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description" content="元素的三种布局模型
-流动模型(Flow)
-浮动模型(Float)
-层模型(Layer)">
-<meta property="og:updated_time" content="2015-11-19T09:44:56.462Z">
+<meta property="og:description" content="导读：看慕课网关于布局的一些笔记">
+<meta property="og:updated_time" content="2015-11-30T07:13:49.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 布局模型那些事儿">
-<meta name="twitter:description" content="元素的三种布局模型
-流动模型(Flow)
-浮动模型(Float)
-层模型(Layer)">
+<meta name="twitter:description" content="导读：看慕课网关于布局的一些笔记">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,6 +45,46 @@
 
 
 		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
 
 		<div id="switch-area" class="switch-area">
 			<div class="switch-wrap">
@@ -76,7 +107,7 @@
 							
 								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
 					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="/liangbijie.github.io" title="GitHub"></a></li>
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
 					        
 								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
@@ -84,6 +115,12 @@
 					</nav>
 				</section>
 				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardownx/" style="font-size: 10px;">mardownx</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
+					</div>
+				</section>
 				
 				
 				
@@ -146,7 +183,7 @@
 							
 								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
 					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="/liangbijie.github.io" title="GitHub"></a></li>
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
 					        
 								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
@@ -158,8 +195,8 @@
       <div class="body-wrap"><article id="post-css " class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/27/css /" class="article-date">
-  	<time datetime="2015-11-27T11:22:40.044Z" itemprop="datePublished">2015-11-27</time>
+      <a href="/2015/11/30/css /" class="article-date">
+  	<time datetime="2015-11-30T07:13:49.886Z" itemprop="datePublished">2015-11-30</time>
 </a>
     </div>
   
@@ -193,12 +230,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <h2 id="元素的三种布局模型">元素的三种布局模型</h2><ul>
+        <p>导读：看慕课网关于布局的一些笔记</p>
+<a id="more"></a>
+<h2 id="元素的三种布局模型">元素的三种布局模型</h2><ul>
 <li>流动模型(Flow)</li>
 <li>浮动模型(Float)</li>
 <li>层模型(Layer)</li>
 </ul>
-<a id="more"></a>
 <h3 id="流动模型">流动模型</h3><h4 id="流动模型介绍">流动模型介绍</h4><p>流动模型是网页中默认的布局模式，即在默认状态下的HTML网页元素都是根据流动模型来分布网页内容的。</p>
 <h4 id="流动模型特点">流动模型特点</h4><ul>
 <li>块状元素会在所处的包含元素内自上向下垂直分布（默认状态下，即块状元素的霸道属性）</li>
@@ -388,13 +426,13 @@ css代码：
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2015/11/27/css /">css 布局模型那些事儿</a></p>
+  <p><span>本文标题:</span><a href="/2015/11/30/css /">css 布局模型那些事儿</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
-  <p><span>发布时间:</span>2015年11月27日 - 19时22分</p>
-  <p><span>最后更新:</span>2015年11月19日 - 17时44分</p>
+  <p><span>发布时间:</span>2015年11月30日 - 15时13分</p>
+  <p><span>最后更新:</span>2015年11月30日 - 15时13分</p>
   <p>
-    <span>原始链接:</span><a href="/2015/11/27/css /" title="css 布局模型那些事儿">http://yoursite.com/2015/11/27/css /</a>
-    <span class="btn" data-clipboard-text="原文: http://yoursite.com/2015/11/27/css /　　作者: 梁弼杰" title="点击复制文章链接">
+    <span>原始链接:</span><a href="/2015/11/30/css /" title="css 布局模型那些事儿">http://yoursite.com/2015/11/30/css /</a>
+    <span class="btn" data-clipboard-text="原文: http://yoursite.com/2015/11/30/css /　　作者: 梁弼杰" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   <script src="/js/clipboard.min.js"></script>
@@ -418,15 +456,15 @@ css代码：
 <nav id="article-nav">
   
     <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2015/11/27/CSS2/">
-        CSS盒子模型那些事儿
+      <a href="/2015/11/30/css input/">
+        css input那些事儿
       </a>
     </div>
   
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/11/27/css input/">
-        css input那些事儿
+      <a href="/2015/11/27/hello-world/">
+        Hello World
       </a>
     </div>
   
@@ -493,7 +531,7 @@ css代码：
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/11/27/css /" data-title="css 布局模型那些事儿" data-url="http://yoursite.com/2015/11/27/css /"></div>
+	<div class="ds-thread" data-thread-key="2015/11/30/css /" data-title="css 布局模型那些事儿" data-url="http://yoursite.com/2015/11/30/css /"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -531,10 +569,10 @@ css代码：
   
     
     <div  class="post-nav-button">
-    <a href="/2015/11/27/CSS2/" title="上一篇: CSS盒子模型那些事儿">
+    <a href="/2015/11/30/css input/" title="上一篇: css input那些事儿">
     <i class="fa fa-angle-left"></i>
     </a>
-    <a href="/2015/11/27/css input/" title="下一篇: css input那些事儿">
+    <a href="/2015/11/27/hello-world/" title="下一篇: Hello World">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>

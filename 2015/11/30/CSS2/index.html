@@ -4,49 +4,18 @@
   <meta charset="utf-8">
   
     <!-- 下面一行意思是 梁弼杰的博客 -->
-  <title>【摄影】大西北精选图片 | 梁弼杰的博客</title>
+  <title>CSS盒子模型那些事儿 | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="img{
-display:inline;
-}
-
-
-
-如果有一个天 我还可以去青海">
+  <meta name="description" content="导读：看慕课网关于盒子模型的一些笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【摄影】大西北精选图片">
-<meta property="og:url" content="http://yoursite.com/2015/11/28/test/index.html">
+<meta property="og:title" content="CSS盒子模型那些事儿">
+<meta property="og:url" content="http://yoursite.com/2015/11/30/CSS2/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description" content="img{
-display:inline;
-}
-
-
-
-如果有一个天 我还可以去青海">
-<meta property="og:image" content="http://i5.tietuku.com/5ea437ae6d1b0e6e.jpg">
-<meta property="og:image" content="http://i5.tietuku.com/2ca337ab137a653d.jpg">
-<meta property="og:image" content="http://i5.tietuku.com/ac8901b39147e2d4.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/2a7ef839e02a1ca7.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/1976ba4ac488de5a.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/047e0505944c4479.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/f6e41f148cbb54b6.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/653f0dac35aa36e6.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/49885c53990b94ae.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/9bf5944e7d52a1bd.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/140af6466c83d4ad.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/02a82ab2811fa4ab.jpg">
-<meta property="og:image" content="http://i12.tietuku.com/f49200ea6baab3c6.jpg">
-<meta property="og:updated_time" content="2015-11-28T14:23:58.998Z">
+<meta property="og:description" content="导读：看慕课网关于盒子模型的一些笔记">
+<meta property="og:updated_time" content="2015-11-30T07:15:18.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【摄影】大西北精选图片">
-<meta name="twitter:description" content="img{
-display:inline;
-}
-
-
-
-如果有一个天 我还可以去青海">
+<meta name="twitter:title" content="CSS盒子模型那些事儿">
+<meta name="twitter:description" content="导读：看慕课网关于盒子模型的一些笔记">
   
   
     <link rel="icon" href="/favicon.png">
@@ -76,6 +45,46 @@ display:inline;
 
 
 		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
 
 		<div id="switch-area" class="switch-area">
 			<div class="switch-wrap">
@@ -98,7 +107,7 @@ display:inline;
 							
 								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
 					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="/liangbijie.github.io" title="GitHub"></a></li>
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
 					        
 								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
@@ -106,6 +115,12 @@ display:inline;
 					</nav>
 				</section>
 				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardownx/" style="font-size: 10px;">mardownx</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
+					</div>
+				</section>
 				
 				
 				
@@ -168,7 +183,7 @@ display:inline;
 							
 								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
 					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="/liangbijie.github.io" title="GitHub"></a></li>
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
 					        
 								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
 					        
@@ -177,11 +192,11 @@ display:inline;
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/28/test/" class="article-date">
-  	<time datetime="2015-11-28T14:23:58.998Z" itemprop="datePublished">2015-11-28</time>
+      <a href="/2015/11/30/CSS2/" class="article-date">
+  	<time datetime="2015-11-30T07:15:18.199Z" itemprop="datePublished">2015-11-30</time>
 </a>
     </div>
   
@@ -194,7 +209,7 @@ display:inline;
         
   
     <h1 class="article-title" itemprop="name">
-      【摄影】大西北精选图片
+      CSS盒子模型那些事儿
     </h1>
   
 
@@ -205,7 +220,7 @@ display:inline;
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摄影/">摄影</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -215,15 +230,13 @@ display:inline;
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p><style><br>img{</p>
-<pre><code><span class="attribute">display</span>:inline;
-</code></pre><p>}<br></style></p>
-<html>
-
-<p></p></html><p></p>
-<h1 id="如果有一个天_我还可以去青海">如果有一个天 我还可以去青海</h1><a id="more"></a>
-<p><img src="http://i5.tietuku.com/5ea437ae6d1b0e6e.jpg" alt="青海湖 (1)"></p>
-<h2 id="我一定要去青海湖">我一定要去青海湖</h2><h3 id="asdf">asdf</h3><h4 id="asdf-1">asdf</h4><p><img src="http://i5.tietuku.com/2ca337ab137a653d.jpg" alt="青海湖 (2)"><br><img src="http://i5.tietuku.com/ac8901b39147e2d4.jpg" alt="青海湖 (3)"><br><img src="http://i12.tietuku.com/2a7ef839e02a1ca7.jpg" alt="青海湖 (4)"><br><img src="http://i12.tietuku.com/1976ba4ac488de5a.jpg" alt="青海湖 (5)"><br><img src="http://i12.tietuku.com/047e0505944c4479.jpg" alt="青海湖 (6)"><br><img src="http://i12.tietuku.com/f6e41f148cbb54b6.jpg" alt="青海湖 (7)"><br><img src="http://i12.tietuku.com/653f0dac35aa36e6.jpg" alt="青海湖 (8)"><br><img src="http://i12.tietuku.com/49885c53990b94ae.jpg" alt="青海湖 (9)"><br><img src="http://i12.tietuku.com/9bf5944e7d52a1bd.jpg" alt="青海湖 (10)"><br><img src="http://i12.tietuku.com/140af6466c83d4ad.jpg" alt="青海湖 (11)"><br><img src="http://i12.tietuku.com/02a82ab2811fa4ab.jpg" alt="青海湖 (12)"><br><img src="http://i12.tietuku.com/f49200ea6baab3c6.jpg" alt="青海湖 (13)"></p>
+        <p>导读：看慕课网关于盒子模型的一些笔记 <a id="more"></a></p>
+<h2 id="盒子模型介绍">盒子模型介绍</h2><ul>
+<li>块标签都具备盒子模型的特征</li>
+<li>宽度width和高度height：盒模型的高度宽度与平时理解不同，一个元素实际宽度（盒子的宽度）=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距。高度类似。 不设置情况下，默认为父容器的100%。</li>
+<li>填充padding：元素内容与边框之间的距离。按顺时针设置上、右、下、左 div{ padding:2px 4px 1px 5px; } 或 上下左右填充都相同{ padding:5px; } 或 上下、左右分别相同 { padding:2px 4px; }<h2 id="边框">边框</h2>div{border：2px solid red}等同于<br>div{<br>  border-width:2px;<br>  border-style:solid;       //参数有：dashed(虚线)dotted(点线)solid(实线)<br>  border-color:red;<br>}</li>
+</ul>
+<h2 id="盒子大小的计算">盒子大小的计算</h2><p>一个盒子实际的宽度=左边距+左边框+左填充+内容宽度+右填充+右边框+右边距<br>如果我们设置一个块级元素的width的值为100px，则这个块级元素的宽度不一定是100px，这个盒子模型的宽度实际宽度还要加上内边距、边框宽度和外边距的两倍。</p>
 
       
     </div>
@@ -232,13 +245,13 @@ display:inline;
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2015/11/28/test/">【摄影】大西北精选图片</a></p>
+  <p><span>本文标题:</span><a href="/2015/11/30/CSS2/">CSS盒子模型那些事儿</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
-  <p><span>发布时间:</span>2015年11月28日 - 22时23分</p>
-  <p><span>最后更新:</span>2015年11月28日 - 22时23分</p>
+  <p><span>发布时间:</span>2015年11月30日 - 15时15分</p>
+  <p><span>最后更新:</span>2015年11月30日 - 15时15分</p>
   <p>
-    <span>原始链接:</span><a href="/2015/11/28/test/" title="【摄影】大西北精选图片">http://yoursite.com/2015/11/28/test/</a>
-    <span class="btn" data-clipboard-text="原文: http://yoursite.com/2015/11/28/test/　　作者: 梁弼杰" title="点击复制文章链接">
+    <span>原始链接:</span><a href="/2015/11/30/CSS2/" title="CSS盒子模型那些事儿">http://yoursite.com/2015/11/30/CSS2/</a>
+    <span class="btn" data-clipboard-text="原文: http://yoursite.com/2015/11/30/CSS2/　　作者: 梁弼杰" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   <script src="/js/clipboard.min.js"></script>
@@ -261,10 +274,16 @@ display:inline;
 
 <nav id="article-nav">
   
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2015/11/30/CSS3/">
+        CSS元素类型那些事儿
+      </a>
+    </div>
+  
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/11/27/markdown/">
-        markdown的语法熟悉
+      <a href="/2015/11/30/css input/">
+        css input那些事儿
       </a>
     </div>
   
@@ -277,7 +296,7 @@ display:inline;
 <!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
 <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如果有一个天_我还可以去青海"><span class="toc-number">1.</span> <span class="toc-text">如果有一个天 我还可以去青海</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#我一定要去青海湖"><span class="toc-number">1.1.</span> <span class="toc-text">我一定要去青海湖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#asdf"><span class="toc-number">1.1.1.</span> <span class="toc-text">asdf</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#asdf-1"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">asdf</span></a></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子模型介绍"><span class="toc-number">1.</span> <span class="toc-text">盒子模型介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边框"><span class="toc-number">2.</span> <span class="toc-text">边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子大小的计算"><span class="toc-number">3.</span> <span class="toc-text">盒子大小的计算</span></a></li></ol>
 </div>
 <style type="text/css">
     .left-col .switch-btn {
@@ -331,7 +350,7 @@ display:inline;
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/11/28/test/" data-title="【摄影】大西北精选图片" data-url="http://yoursite.com/2015/11/28/test/"></div>
+	<div class="ds-thread" data-thread-key="2015/11/30/CSS2/" data-title="CSS盒子模型那些事儿" data-url="http://yoursite.com/2015/11/30/CSS2/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -367,14 +386,16 @@ display:inline;
 
   
   
+    
     <div  class="post-nav-button">
-    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
-    <a href="/2015/11/27/markdown/" title="下一篇: markdown的语法熟悉">
+    <a href="/2015/11/30/CSS3/" title="上一篇: CSS元素类型那些事儿">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/11/30/css input/" title="下一篇: css input那些事儿">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
-    
 
 
 

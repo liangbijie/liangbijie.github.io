@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://liangbijie.com/2015/11/30/JavaScript Dom/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
 <meta property="og:description" content="导读：对《JavaScript    Dom 编程艺术》全书的笔记">
-<meta property="og:updated_time" content="2015-12-01T04:04:19.227Z">
+<meta property="og:updated_time" content="2015-12-02T12:42:51.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《JavaScript DOM 编程艺术》笔记">
 <meta name="twitter:description" content="导读：对《JavaScript    Dom 编程艺术》全书的笔记">
@@ -98,6 +98,8 @@
 				        
 							<li><a href="/tags/随笔">随笔</a></li>
 				        
+							<li><a href="/tags/总结">总结</a></li>
+				        
 							<li><a href="/tags/摄影">摄影</a></li>
 				        
 						</ul>
@@ -118,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
 					</div>
 				</section>
 				
@@ -172,6 +174,8 @@
 					<li><a href="/archives/">所有文章</a></li>
 		        
 					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/总结">总结</a></li>
 		        
 					<li><a href="/tags/摄影">摄影</a></li>
 		        
@@ -268,7 +272,45 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <p>对于XHTML的文档说明我只能说非常非常繁琐，相比之下我更喜欢HTML5的文档说明，详情见11章~</p>
 <h3 id="CSS">CSS</h3><p>此节很简单，总结来说就是告诉我们如何外部引入css<br>方法：<br><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;style/css.css&quot; /&gt;</code></p>
 <h3 id="JavaScript">JavaScript</h3><p>此节没有什么重要的内容</p>
-<h2 id="显示“缩略语列表”">显示“缩略语列表”</h2><h3 id="编写displayAbbreviations函数">编写displayAbbreviations函数</h3><h3 id="创建标记">创建标记</h3><h3 id="一个浏览器“地雷”">一个浏览器“地雷”</h3><h2 id="显示”文献来源链接表“">显示”文献来源链接表“</h2><h2 id="显示”快捷键清单“">显示”快捷键清单“</h2><h2 id="检索和添加信息">检索和添加信息</h2><h2 id="小结">小结</h2>
+<h2 id="显示“缩略语列表”">显示“缩略语列表”</h2><p>本章的任务是把一篇文章里面的<code>&lt;abbr&gt;</code>标签中的title属性和包含的文本集中显示出来，即出现以下的列表</p>
+<pre><code><span class="tag">&lt;<span class="title">dl</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>W3C<span class="tag">&lt;<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>World Wide Web Consortium<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    ......
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+</code></pre><p>我们可以使用DOM来创建这个定义列表，步骤如下：</p>
+<ol>
+<li>遍历<code>&lt;abbr&gt;</code></li>
+<li>保存<code>&lt;abbr&gt;</code>属性中的title属性<br>3.保存<code>&lt;abbr&gt;</code>包含的文本</li>
+<li>创建一个<code>dl</code></li>
+<li>遍历<code>&lt;abbr&gt;</code>中的title和文本</li>
+<li>创建一个<code>dt</code></li>
+<li>将文本插入<code>dt</code></li>
+<li>创建一个<code>dd</code></li>
+<li>将title插入<code>dd</code></li>
+<li>循环步骤5-9，直到都插入完</li>
+<li><p>把<code>dl</code>元素追加到HTML文档的body元素上</p>
+<h3 id="编写displayAbbreviations函数">编写displayAbbreviations函数</h3><p>此函数就是用来实现以上步骤的<br>步骤1.遍历<code>&lt;abbr&gt;</code></p>
+<p>var abbreviations=document.getElementByTagName(“abbr”);</p>
+</li>
+</ol>
+<p>为了使此函数使用所有的文档，我们需要判断一下是否含有<code>&lt;abbr&gt;</code></p>
+<pre><code><span class="keyword">if</span>(abbreviations.<span class="property">length</span>&lt;<span class="number">1</span>)
+<span class="command">    return</span> <span class="constant">false</span>;
+</code></pre><p>步骤2-3 保存title和文本内容</p>
+<pre><code><span class="keyword">var</span> defs= <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//保存数据的数组</span>
+<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;abbreviations.length;i++){
+    <span class="keyword">var</span> definition=abbreviations[i].getAttribute(<span class="string">'title'</span>);
+    <span class="keyword">var</span> key=abbreviations[i].lastChild.nodeValue;
+    defs[key]=definition;
+}
+</code></pre><p>以上三条语句也可以变成一条语句</p>
+<pre><code><span class="atom">defs</span>[<span class="atom">abbreviations</span>[<span class="atom">i</span>].<span class="atom">lastChild</span>.<span class="atom">nodeValue</span>]=<span class="atom">abbreviations</span>[<span class="atom">i</span>].<span class="atom">getAttribute</span>(<span class="string">'title'</span>);
+</code></pre><p>但是这样写的话不便于理解，日后再去阅读就会有困难</p>
+<h3 id="创建标记">创建标记</h3><p>步骤4-6</p>
+<pre><code><span class="keyword">var</span> dlist=<span class="built_in">document</span>.createElement(<span class="string">"dl"</span>);
+</code></pre><p>此时创建出来的dl元素只是一个游离的孤儿</p>
+<h3 id="一个浏览器“地雷”">一个浏览器“地雷”</h3><h2 id="显示”文献来源链接表“">显示”文献来源链接表“</h2><h2 id="显示”快捷键清单“">显示”快捷键清单“</h2><h2 id="检索和添加信息">检索和添加信息</h2><h2 id="小结">小结</h2>
       
     </div>
     
@@ -279,7 +321,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   <p><span>本文标题:</span><a href="/2015/11/30/JavaScript Dom/">《JavaScript DOM 编程艺术》笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
   <p><span>发布时间:</span>2015年11月30日 - 10时20分</p>
-  <p><span>最后更新:</span>2015年12月01日 - 12时04分</p>
+  <p><span>最后更新:</span>2015年12月02日 - 20时42分</p>
   <p>
     <span>原始链接:</span><a href="/2015/11/30/JavaScript Dom/" title="《JavaScript DOM 编程艺术》笔记">http://liangbijie.com/2015/11/30/JavaScript Dom/</a>
     <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/11/30/JavaScript Dom/　　作者: 梁弼杰" title="点击复制文章链接">
@@ -313,8 +355,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/11/20/markdown/">
-        markdown的语法熟悉
+      <a href="/2015/11/25/bolgreason/">
+        为什么我要写博客？
       </a>
     </div>
   
@@ -422,7 +464,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     <a href="/2015/12/01/pic/" title="上一篇: 【摄影】大西北精选图片">
     <i class="fa fa-angle-left"></i>
     </a>
-    <a href="/2015/11/20/markdown/" title="下一篇: markdown的语法熟悉">
+    <a href="/2015/11/25/bolgreason/" title="下一篇: 为什么我要写博客？">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>

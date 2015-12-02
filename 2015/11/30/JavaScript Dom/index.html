@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://liangbijie.com/2015/11/30/JavaScript Dom/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
 <meta property="og:description" content="导读：对《JavaScript    Dom 编程艺术》全书的笔记">
-<meta property="og:updated_time" content="2015-12-01T02:18:33.946Z">
+<meta property="og:updated_time" content="2015-12-01T04:04:19.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《JavaScript DOM 编程艺术》笔记">
 <meta name="twitter:description" content="导读：对《JavaScript    Dom 编程艺术》全书的笔记">
@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardownx/" style="font-size: 10px;">mardownx</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+						<a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
 					</div>
 				</section>
 				
@@ -247,11 +247,28 @@
 <li>接下来获取和设置属性<br>第一种：getAttribute<br>此方法只能通过元素节点对象调用 ，如果对象没有属性值就会返回一个null<br>我们可以利用这个特性来检查某项数据是否是null；<br>var paras= document.getElementsByTagName(‘p’);<br>  for(var i=0;i&lt;paras.length;i++){</li>
 </ul>
 <p>}</p>
-<h1 id="第8章_充实文档的内容">第8章 充实文档的内容</h1><h2 id="不应该做什么">不应该做什么</h2><pre><code>此章明确表明我们不应该使用<span class="keyword">JS</span>把重要的内容添加到网页内容里面去
-原因：
-第一点：如果用户禁用了<span class="keyword">JS</span>或者缺乏CSS和DOM支持的用户就看不到其<span class="keyword">JS</span>添加的重要内容
-第二点：各大
-</code></pre><h2 id="把“不可见”变成可以见">把“不可见”变成可以见</h2><h2 id="内容">内容</h2><h3 id="选用HTML、XHTML还是HTML5">选用HTML、XHTML还是HTML5</h3><h3 id="CSS">CSS</h3><h3 id="JavaScript">JavaScript</h3><h2 id="显示“缩略语列表”">显示“缩略语列表”</h2><h3 id="编写displayAbbreviations函数">编写displayAbbreviations函数</h3><h3 id="创建标记">创建标记</h3><h3 id="一个浏览器“地雷”">一个浏览器“地雷”</h3><h2 id="显示”文献来源链接表“">显示”文献来源链接表“</h2><h2 id="显示”快捷键清单“">显示”快捷键清单“</h2><h2 id="检索和添加信息">检索和添加信息</h2><h2 id="小结">小结</h2>
+<h1 id="第8章_充实文档的内容">第8章 充实文档的内容</h1><h2 id="不应该做什么">不应该做什么</h2><p>此章明确表明我们不应该使用JS把重要的内容添加到网页内容里面去<br>    原因：<br>    第一点：如果用户禁用了JS或者缺乏CSS和DOM支持的用户就看不到其JS添加的重要内容<br>    第二点：各大搜索器机器人也几乎不支持JavaScript，所以也就搜不到你用js添加的内容<br>本节还讲了我们要遵循渐进增强和平稳退化原则<br>渐进增强原则：就是从网页最核心的部分（即内容）开始做起，然后再根据内容使用标记良好的结构再逐步加强这些内容<br>平稳退化原则：其实我认为这个原则和渐进增强说的是一个意思，换汤不换药。如果我们按照渐进增强的原则去充实内容，我们为内容添加的样式和行为就自然支持平稳退化。</p>
+<h2 id="把“不可见”变成可以见">把“不可见”变成可以见</h2><p>html标签中有很多标签有隐藏属性，如title、alt等<br>有些浏览器会把title属性或者alt属性内容作为弹出式的提示框&lt;这些都是标签的滥用！！！&gt;<br>alt原用途是：在图片不可见的时候用一段文字来描述这个位置的图片<br>为了解决某些滥用的行为我们可以用DOM编程来这些问题<br>方法：</p>
+<ul>
+<li>得到隐藏在属性里的信息</li>
+<li>创建标记封装这些信息</li>
+<li>把这些标记插入到文档</li>
+</ul>
+<p>接下来就来说说怎么实现上面步骤</p>
+<h2 id="内容">内容</h2><p><strong>在说步骤之前首先我们来区分一下<abbr>和<acronym>的区别</acronym></abbr></strong><br><code>&lt;abbr&gt;</code>含义是“缩略语”abbreviation<br><code>&lt;acronym&gt;</code>含义是“首字母缩写词”acronym<br>所有的首字母缩略词都是缩略语，但所有缩略语不一定都是首字母缩略词<br>举个例子 list缩写成li这个例子中的li的是缩略语但他不是首字母缩略词<br>其实很容易记就是只要是缩略了的都可以用<code>&lt;abbr&gt;</code><br>告诉大家一个好消息就是：在HTML5中<code>&lt;acronym&gt;</code>已经被<code>&lt;abbr&gt;</code>取代了！！！</p>
+<h3 id="选用HTML、XHTML还是HTML5">选用HTML、XHTML还是HTML5</h3><p>我觉得对于标记而言，选用HTML还是XHTML是我们的习惯和自由，但是最重要的是不是我们选用哪种文档类型，而是我们使用的标记必须与我们选用的DOCTYPE声明保持一致<br>下面来介绍下XHTML和HTML5文档的一些要求<br>XHTML对标记有更严格的要求：</p>
+<ul>
+<li>要求所有的标签名和属性名都必须使用小写字母</li>
+<li>所有的标签都必须闭合，<code>&lt;img&gt;</code>和<code>&lt;br&gt;</code>等单标签也不例外。<br>  即应该写成<code>&lt;img /&gt;</code>和<code>&lt;br /&gt;</code>，为了与早期的浏览器保持兼容，应该在反斜杠字符前保留一个空格。</li>
+<li>文档声明<pre><code>`<span class="doctype">&lt;!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span>`
+</code></pre></li>
+</ul>
+<p>对于XHTML的文档说明我只能说非常非常繁琐，相比之下我更喜欢HTML5的文档说明，详情见11章~</p>
+<h3 id="CSS">CSS</h3><p>此节很简单，总结来说就是告诉我们如何外部引入css<br>方法：<br><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;style/css.css&quot; /&gt;</code></p>
+<h3 id="JavaScript">JavaScript</h3><p>此节没有什么重要的内容</p>
+<h2 id="显示“缩略语列表”">显示“缩略语列表”</h2><h3 id="编写displayAbbreviations函数">编写displayAbbreviations函数</h3><h3 id="创建标记">创建标记</h3><h3 id="一个浏览器“地雷”">一个浏览器“地雷”</h3><h2 id="显示”文献来源链接表“">显示”文献来源链接表“</h2><h2 id="显示”快捷键清单“">显示”快捷键清单“</h2><h2 id="检索和添加信息">检索和添加信息</h2><h2 id="小结">小结</h2>
       
     </div>
     
@@ -262,7 +279,7 @@
   <p><span>本文标题:</span><a href="/2015/11/30/JavaScript Dom/">《JavaScript DOM 编程艺术》笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
   <p><span>发布时间:</span>2015年11月30日 - 10时20分</p>
-  <p><span>最后更新:</span>2015年12月01日 - 10时18分</p>
+  <p><span>最后更新:</span>2015年12月01日 - 12时04分</p>
   <p>
     <span>原始链接:</span><a href="/2015/11/30/JavaScript Dom/" title="《JavaScript DOM 编程艺术》笔记">http://liangbijie.com/2015/11/30/JavaScript Dom/</a>
     <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/11/30/JavaScript Dom/　　作者: 梁弼杰" title="点击复制文章链接">

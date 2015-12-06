@@ -1870,13 +1870,13 @@ li:hover {
 .article-entry code {
   font-family: "Microsoft YaHei", Inconsolata, Menlo, Monaco, "Hiragino Sans GB ", "SimHei" arial;
   font-size: 1em;
-}
-.article-entry code {
-  color: #808080;
-  background: rgba(248,237,223,0.5);
-  padding: 0 0.3em;
+  background: #000;
+  color: #f8f8f8;
   -webkit-border-radius: 7px;
   border-radius: 7px;
+}
+.article-entry code {
+  padding: 0 0.3em;
 }
 .article-entry pre code {
   text-shadow: none;

@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
     <!-- 下面一行意思是 梁弼杰的博客 -->
-  <title>为什么我要写博客？ | 梁弼杰的博客</title>
+  <title>揭秘BFC，简单粗暴（未完） | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="导读：对于自己的为什么要写博客的一些原因">
+  <meta name="description" content="导读：本文讲了什么是BFC，以及BFC的布局规则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为什么我要写博客？">
-<meta property="og:url" content="http://liangbijie.com/2015/11/25/bolgreason/index.html">
+<meta property="og:title" content="揭秘BFC，简单粗暴（未完）">
+<meta property="og:url" content="http://liangbijie.com/2015/12/08/BFC/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description" content="导读：对于自己的为什么要写博客的一些原因">
-<meta property="og:updated_time" content="2015-12-02T12:06:09.835Z">
+<meta property="og:description" content="导读：本文讲了什么是BFC，以及BFC的布局规则">
+<meta property="og:image" content="http://p1.qhimg.com/d/inn/4055c62a/4dca44a927d4c1ffc30e3ae5f53a0b79.png">
+<meta property="og:updated_time" content="2015-12-31T13:48:15.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="为什么我要写博客？">
-<meta name="twitter:description" content="导读：对于自己的为什么要写博客的一些原因">
+<meta name="twitter:title" content="揭秘BFC，简单粗暴（未完）">
+<meta name="twitter:description" content="导读：本文讲了什么是BFC，以及BFC的布局规则">
   
   
     <link rel="icon" href="/favicon.png">
@@ -196,11 +197,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-bolgreason" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-BFC" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/25/bolgreason/" class="article-date">
-  	<time datetime="2015-11-25T03:24:11.000Z" itemprop="datePublished">2015-11-25</time>
+      <a href="/2015/12/08/BFC/" class="article-date">
+  	<time datetime="2015-12-08T03:48:21.000Z" itemprop="datePublished">2015-12-08</time>
 </a>
     </div>
   
@@ -213,7 +214,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      为什么我要写博客？
+      揭秘BFC，简单粗暴（未完）
     </h1>
   
 
@@ -224,7 +225,7 @@
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -234,13 +235,57 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p>导读：对于自己的为什么要写博客的一些原因<a id="more"></a></p>
-<h2 id="由博客引发的思考">由博客引发的思考</h2><p>博客，以前一直觉得是一种高大上而无法企及的东西，感觉那些写博客的人都特别特别厉害，每每看到他们的博文都会惊奇，他们是何来那么多东西可写可传的？而今天我也为自己搭建了一个属于我自己的博客，初衷是试着也记录下属于自己的东西。<br>搭博客的时候我正好和某人聊天提起这个，而他对我这种行为表示费解，说：现在都是微博时代了，博客已经慢慢退出人们视野了。<br>由此便引出了我的思考：为什么我要写博客？这样做会不会毫无意义？<br>我问了问自己，现在我想明白了</p>
-<h2 id="写博客以下几点原因">写博客以下几点原因</h2><h3 id="作为我的日记本">作为我的日记本</h3><p>博客可以想当我的一个日记本，记录下自己当时的心情，特别是对于酷爱旅游的我，在路上经常会有很多的对一些景色的分享和一些事的感悟，最让我想提笔写下的是那些自己感受到的民俗文化，我想把其精华之处，把其动人之处记录下来，供自己慢慢体会和欣赏，顺便也可作为我一生中阅历的见证。</p>
-<h3 id="作为我的笔记本">作为我的笔记本</h3><p>   博客也可以当做我的笔记本，现在我在学前端知识，所以难免会有很多前端路上的精品书籍我需要去阅读去理解，现在大概想想我看过的前端书也不少了，但是那些书籍，我心里感觉起来还特别的空，根本没有高中那种回顾起来特别沉甸甸的感觉，我想这大概是到了大学便舍去高中那种爱记笔记的习惯了吧，所以导致现在看多少忘多少的现状。而现在我感觉博客完全可以替代笔记本，尽管不能像笔记本那样能捧在手上翻阅，但是博客只要手机在手就可以随时随地记录我对知识的理解和对重要东西得标记以便下次查阅。</p>
-<h3 id="作为我的倾诉对象">作为我的倾诉对象</h3><p>现在深深感觉学技术的时候是非常寂寞的，而我有时候有话想找个人说说，眼前除了电脑一直在那静静的亮着，便是几个紧皱眉头陷入沉思的程序猿，我也不忍心去打扰他们，于是内心积累的一些话语便只能自己默默的吞咽，而现在我可以把我想说的话都写在博客里，把我的内心世界展示给别人，算是我的一种倾诉吧～想必自然会有愿意听我倾诉的人关注我的博客，和我用文字交流我们的思想和看法～</p>
-<h3 id="结交更多志同道合的朋友">结交更多志同道合的朋友</h3><p>其实我更想把我对一些技术问题解决的办法分享给大家，并且通过博客找到志同道合的人，</p>
-<h2 id="后记">后记</h2><p>用一个不恰当的词来形容微博、空间和朋友圈 那便是浅显，而如果想找到具有深度的信息，现在看来，博客则是不二之选<br>那我以后还会好发不发空间和朋友圈呢？ 发！我会毫不犹豫的回答，我会把这种方式作为我生活的调节剂，有时候发发动态，分享下当时的心情和好友互动下，也是极好的<br>但是我绝不会把我本该写在博客的内容发布到朋友圈，我博客内容只是想给那些想看我博客的人看的，并不会发到让所有人泛泛而看～</p>
+        <p>导读：本文讲了什么是BFC，以及BFC的布局规则<a id="more"></a></p>
+<h2 id="什么是BFC？">什么是BFC？</h2><p>在介绍BFC之前我先来介绍下<strong>Box(盒子)</strong>和<strong>Formatting Context（一个独立的渲染区域）</strong></p>
+<h3 id="Box(盒子)">Box(盒子)</h3><p>Box(盒子)是CSS布局的对象和<strong>基本单位</strong>，直观点来说，就是一个页面是由很多个Box(盒子)组成的,你看到的页面其实是由各种盒子组装在一起所展示的效果。<br>元素的类型和display属性，决定了这个Box的类型。不同类型的 Box，会参与不同的 Formatting Context（一个独立的渲染区域），因此Box内的元素会以不同的方式渲染。<br><strong>接下来我介绍下盒子的类型</strong></p>
+<ul>
+<li>block-level box:<br>&ensp; &ensp;这个盒子的display 属性为<strong>block/list-item/table</strong>，并且参与<strong> block fomatting context</strong>；</li>
+<li>inline-level box:<br>&ensp; &ensp;这个盒子的display 属性为 <strong>inline/inline-block/inline-table</strong>，并且参与 <strong>inline formatting context</strong>；</li>
+<li>run-in box:<br>&ensp; &ensp;css3中才有，这儿先不讲了。<h3 id="Formatting_context（一个独立的渲染区域）">Formatting context（一个独立的渲染区域）</h3>Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。<br>最常见的 Formatting context 有 </li>
+<li>Block fomatting context (简称BFC) </li>
+<li>Inline formatting context (简称IFC)</li>
+<li>CSS2.1 中只有 BFC 和 IFC, CSS3 中还增加了 GFC 和 FFC</li>
+</ul>
+<h2 id="BFC是什么鬼？">BFC是什么鬼？</h2><p>BFC的全称是Block formatting contexts，网上都翻译成<strong>块级格式上下文</strong>而我觉得翻译成<strong>块级格式化范围</strong>更为恰当<br>它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个<strong>区域外部毫不相干</strong>。<br>通俗的来解释BFC，他是一个独立的布局环境，我们可以理解为一个箱子（实际上是看不见摸不着的），箱子里面物品的摆放是不受外界的影响的。<br>转换为BFC的理解则是：BFC中的元素的布局是不受外界的影响（我们往往利用这个特性来消除浮动元素对其非浮动的兄弟元素和其子元素带来的影响。）并且在一个BFC中，块盒(block-level box)与行盒(inline-level box)都会<strong>垂直</strong>的沿着其父元素的边框排列。</p>
+<h2 id="BFC布局规则">BFC布局规则</h2><ul>
+<li>规则一：内部的Box会在垂直方向，一个接一个地放置。</li>
+<li>规则二：Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠</li>
+<li>规则三：每个box的左边，都会与包含块box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</li>
+<li>规则四：BFC的区域不会与float box重叠。</li>
+<li>规则五：BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</li>
+<li>规则六：计算BFC的高度时，浮动元素也参与计算</li>
+</ul>
+<h2 id="哪些元素会生成BFC?">哪些元素会生成BFC?</h2><ul>
+<li>根元素</li>
+<li>float属性不为none</li>
+<li>position为absolute或fixed</li>
+<li>display为inline-block, table-cell, table-caption, flex, inline-flex</li>
+<li>overflow不为visible</li>
+</ul>
+<h2 id="BFC的作用及原理">BFC的作用及原理</h2><h3 id="自适应两栏布局">自适应两栏布局</h3><p>代码：</p>
+<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+    <span class="tag">body</span> <span class="rules">{
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300px</span></span></span>;
+        <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
+    }</span>
+
+    <span class="class">.aside</span> <span class="rules">{
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;
+        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">150px</span></span></span>;
+        <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;
+        <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#f66</span></span></span>;
+    }</span>
+
+    <span class="class">.main</span> <span class="rules">{
+        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;
+        <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#fcc</span></span></span>;
+    }</span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"aside"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"main"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+</code></pre><p>页面：<br><img src="http://p1.qhimg.com/d/inn/4055c62a/4dca44a927d4c1ffc30e3ae5f53a0b79.png" alt=""><br><em>根据BFC布局规则三：</em><br>每个box的左边，都会与包含块box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</p>
 
       
     </div>
@@ -249,13 +294,13 @@
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2015/11/25/bolgreason/">为什么我要写博客？</a></p>
+  <p><span>本文标题:</span><a href="/2015/12/08/BFC/">揭秘BFC，简单粗暴（未完）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
-  <p><span>发布时间:</span>2015年11月25日 - 11时24分</p>
-  <p><span>最后更新:</span>2015年12月02日 - 20时06分</p>
+  <p><span>发布时间:</span>2015年12月08日 - 11时48分</p>
+  <p><span>最后更新:</span>2015年12月31日 - 21时48分</p>
   <p>
-    <span>原始链接:</span><a href="/2015/11/25/bolgreason/" title="为什么我要写博客？">http://liangbijie.com/2015/11/25/bolgreason/</a>
-    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/11/25/bolgreason/　　作者: 梁弼杰" title="点击复制文章链接">
+    <span>原始链接:</span><a href="/2015/12/08/BFC/" title="揭秘BFC，简单粗暴（未完）">http://liangbijie.com/2015/12/08/BFC/</a>
+    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/12/08/BFC/　　作者: 梁弼杰" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   <script src="/js/clipboard.min.js"></script>
@@ -279,15 +324,15 @@
 <nav id="article-nav">
   
     <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2015/11/30/JavaScript Dom/">
-        《JavaScript DOM 编程艺术》笔记（未完）
+      <a href="/2015/12/29/ajax-base/">
+        带你初步了解AJAX
       </a>
     </div>
   
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/11/20/markdown/">
-        markdown 学习笔记
+      <a href="/2015/12/06/time/">
+        日报
       </a>
     </div>
   
@@ -300,7 +345,7 @@
 <!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
 <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#由博客引发的思考"><span class="toc-number">1.</span> <span class="toc-text">由博客引发的思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客以下几点原因"><span class="toc-number">2.</span> <span class="toc-text">写博客以下几点原因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#作为我的日记本"><span class="toc-number">2.1.</span> <span class="toc-text">作为我的日记本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为我的笔记本"><span class="toc-number">2.2.</span> <span class="toc-text">作为我的笔记本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为我的倾诉对象"><span class="toc-number">2.3.</span> <span class="toc-text">作为我的倾诉对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结交更多志同道合的朋友"><span class="toc-number">2.4.</span> <span class="toc-text">结交更多志同道合的朋友</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">3.</span> <span class="toc-text">后记</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是BFC？"><span class="toc-number">1.</span> <span class="toc-text">什么是BFC？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Box(盒子)"><span class="toc-number">1.1.</span> <span class="toc-text">Box(盒子)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Formatting_context（一个独立的渲染区域）"><span class="toc-number">1.2.</span> <span class="toc-text">Formatting context（一个独立的渲染区域）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC是什么鬼？"><span class="toc-number">2.</span> <span class="toc-text">BFC是什么鬼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC布局规则"><span class="toc-number">3.</span> <span class="toc-text">BFC布局规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#哪些元素会生成BFC?"><span class="toc-number">4.</span> <span class="toc-text">哪些元素会生成BFC?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC的作用及原理"><span class="toc-number">5.</span> <span class="toc-text">BFC的作用及原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自适应两栏布局"><span class="toc-number">5.1.</span> <span class="toc-text">自适应两栏布局</span></a></li></ol></li></ol>
 </div>
 <style type="text/css">
     .left-col .switch-btn {
@@ -354,7 +399,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/11/25/bolgreason/" data-title="为什么我要写博客？" data-url="http://liangbijie.com/2015/11/25/bolgreason/"></div>
+	<div class="ds-thread" data-thread-key="2015/12/08/BFC/" data-title="揭秘BFC，简单粗暴（未完）" data-url="http://liangbijie.com/2015/12/08/BFC/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -392,10 +437,10 @@
   
     
     <div  class="post-nav-button">
-    <a href="/2015/11/30/JavaScript Dom/" title="上一篇: 《JavaScript DOM 编程艺术》笔记（未完）">
+    <a href="/2015/12/29/ajax-base/" title="上一篇: 带你初步了解AJAX">
     <i class="fa fa-angle-left"></i>
     </a>
-    <a href="/2015/11/20/markdown/" title="下一篇: markdown 学习笔记">
+    <a href="/2015/12/06/time/" title="下一篇: 日报">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+    <!-- 下面一行意思是 梁弼杰的博客 -->
+  <title>[转]快速入门RequireJS | 梁弼杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导读：仅需一篇博客，就能让你快速理解RequireJs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转]快速入门RequireJS">
+<meta property="og:url" content="http://liangbijie.com/2015/12/06/requirejs_fast/index.html">
+<meta property="og:site_name" content="梁弼杰的博客">
+<meta property="og:description" content="导读：仅需一篇博客，就能让你快速理解RequireJs">
+<meta property="og:updated_time" content="2015-12-29T12:56:54.595Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[转]快速入门RequireJS">
+<meta name="twitter:description" content="导读：仅需一篇博客，就能让你快速理解RequireJs">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">梁弼杰</a></h1>
+		</hgroup>
+
+		
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/总结">总结</a></li>
+				        
+							<li><a href="/tags/摄影">摄影</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AJAX/" style="font-size: 10px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">专注于前端</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">梁弼杰</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">梁弼杰</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/总结">总结</a></li>
+		        
+					<li><a href="/tags/摄影">摄影</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-requirejs_fast" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/06/requirejs_fast/" class="article-date">
+  	<time datetime="2015-12-06T07:05:11.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      [转]快速入门RequireJS
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>导读：仅需一篇博客，就能让你快速理解RequireJs<a id="more"></a><br>随着网站功能逐渐丰富，网页中的js也变得越来越复杂和臃肿，原有通过script标签来导入一个个的js文件这种方式已经不能满足现在互联网开发模式，我们需要团队协作、模块复用、单元测试等等一系列复杂的需求。<br>RequireJS是一个非常小巧的JavaScript模块载入框架，是AMD规范最好的实现者之一。最新版本的RequireJS压缩后只有14K，堪称非常<strong>轻量</strong>。它还同时可以和其他的框架<strong>协同工作</strong>，使用RequireJS必将使您的前端代码质量得以提升。</p>
+<h2 id="requirejs能带来什么好处">requirejs能带来什么好处</h2><p>官方对requirejs的描述：</p>
+<blockquote>
+<p>RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.</p>
+</blockquote>
+<p>大致意思：<br>在浏览器中可以作为js文件的模块加载器，也可以用在Node和Rhino环境，balabala…。这段话描述了requirejs的基本功能”<strong>模块化加载</strong>“，什么是模块化加载？我们要从之后的篇幅中一一解释<br>先来看一段常见的场景，通过示例讲解如何运用requirejs</p>
+<h3 id="正常编写方式">正常编写方式</h3><p><strong>index.html:</strong></p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"a.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span>&gt;</span>body<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p><strong>a.js:</strong></p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fun1</span><span class="params">()</span></span>{
+  alert(<span class="string">"it works"</span>);
+}
+
+fun1();
+</code></pre><p>可能你更喜欢这样写</p>
+<pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
+    function fun1<span class="list">()</span><span class="collection">{
+      alert<span class="list">(<span class="string">"it works"</span>)</span><span class="comment">;</span>
+    }</span>
+
+    fun1<span class="list">()</span><span class="comment">;</span>
+}</span>)</span><span class="list">()</span>
+</code></pre><p>第二种方法使用了块作用域来申明function防止<strong>污染全局变量</strong>，本质还是一样的，当运行上面两种例子时不知道你是否注意到，<strong>alert执行的时候，html内容是一片空白的</strong>，即<span>body</span>并未被显示，当点击确定后，才出现，这就是<strong>JS阻塞浏览器渲染</strong>导致的结果。</p>
+<h3 id="requirejs写法">requirejs写法</h3><p>当然首先要到requirejs的网站去下载js -&gt; requirejs.rog<br><strong>index.html:</strong></p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"require.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+            <span class="built_in">require</span>([<span class="string">"a"</span>]);
+        </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span>&gt;</span>body<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p><strong>a.js:</strong></p>
+<pre><code>define(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="function"><span class="keyword">function</span> <span class="title">fun1</span><span class="params">()</span></span>{
+      alert(<span class="string">"it works"</span>);
+    }
+
+    fun1();
+})
+</code></pre><p>浏览器提示了”it  works”，说明运行正确，但是有一点不一样，<strong>这次浏览器并不是一片空白，body已经出现在页面中</strong>，目前为止可以知道requirejs具有如下优点：<br>1、<strong>防止js加载阻塞页面渲染</strong><br>2、<strong>使用程序调用的方式加载js，防出现如下丑陋的场景</strong></p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"a.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"b.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"c.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"d.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"e.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"f.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"g.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"h.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"i.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"j.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><h2 id="基本API">基本API</h2><p>require会定义三个变量：<strong>define</strong>,<strong>require</strong>,<strong>requirejs</strong>，其中require === requirejs，一般使用require更简短<br>define 从名字就可以看出这个api是用来<strong>定义一个模块</strong><br>require <strong>加载依赖模块，并执行加载完后的回调函数</strong><br>a.js：</p>
+<pre><code>define(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="function"><span class="keyword">function</span> <span class="title">fun1</span><span class="params">()</span></span>{
+      alert(<span class="string">"it works"</span>);
+    }
+
+    fun1();
+})
+</code></pre><p>通过define函数定义了一个模块，然后再页面中使用：</p>
+<pre><code><span class="built_in">require</span>([<span class="string">"js/a"</span>]);
+</code></pre><p>来加载该模块(注意require中的依赖是一个<strong>数组</strong>，即使只有一个依赖，你也必须使用数组来定义)，requir API的第二个参数是callback，一个function，是用来处理加载完毕后的逻辑，如：</p>
+<pre><code><span class="built_in">require</span>([<span class="string">"js/a"</span>],<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+    alert(<span class="string">"load finished"</span>);
+})
+</code></pre><h3 id="加载文件">加载文件</h3><p>之前的例子中加载模块都是本地js，但是大部分情况下网页需要加载的JS可能来自本地服务器、其他网站或CDN，这样就不能通过这种方式来加载了，我们以加载一个jquery库为例：</p>
+<pre><code><span class="built_in">require</span>.config({
+    paths : {
+        <span class="string">"jquery"</span> : [<span class="string">"http://libs.baidu.com/jquery/2.0.3/jquery"</span>]   
+    }
+})
+<span class="built_in">require</span>([<span class="string">"jquery"</span>,<span class="string">"js/a"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>{
+    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        alert(<span class="string">"load finished"</span>);  
+    })
+})
+</code></pre><p>这边涉及了require.config，require.config是用来配置模块加载位置，简单点说就是给模块起一个更短更好记的名字，比如将百度的jquery库地址标记为jquery，这样在require时只需要写[“jquery”]就可以加载该js，本地的js我们也可以这样配置：</p>
+<pre><code><span class="built_in">require</span>.config({
+    paths : {
+        <span class="string">"jquery"</span> : [<span class="string">"http://libs.baidu.com/jquery/2.0.3/jquery"</span>],
+        <span class="string">"a"</span> : <span class="string">"js/a"</span>   
+    }
+})
+<span class="built_in">require</span>([<span class="string">"jquery"</span>,<span class="string">"a"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>{
+    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        alert(<span class="string">"load finished"</span>);  
+    })
+})
+</code></pre><p>通过paths的配置会使我们的模块名字更精炼，paths还有一个重要的功能，就是可以配置多个路径，如果远程cdn库没有加载成功，可以加载本地的库，如：</p>
+<pre><code><span class="built_in">require</span>.config({
+    paths : {
+        <span class="string">"jquery"</span> : [<span class="string">"http://libs.baidu.com/jquery/2.0.3/jquery"</span>, <span class="string">"js/jquery"</span>],
+        <span class="string">"a"</span> : <span class="string">"js/a"</span>   
+    }
+})
+<span class="built_in">require</span>([<span class="string">"jquery"</span>,<span class="string">"a"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>{
+    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        alert(<span class="string">"load finished"</span>);  
+    })
+})
+</code></pre><p>这样配置后，当百度的jquery没有加载成功后，会加载本地js目录下的jquery<br>在使用requirejs时，加载模块时不用写.js后缀的，当然也是不能写后缀<br>上面例子中的callback函数中发现有$参数，这个就是依赖的jquery模块的输出变量，如果你依赖多个模块，可以依次写入多个参数来使用：</p>
+<pre><code><span class="built_in">require</span>([<span class="string">"jquery"</span>,<span class="string">"underscore"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$, _</span>)</span>{
+    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        _.each([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],alert);
+    })
+})
+</code></pre><p>如果某个模块不输出变量值，则没有，所以尽量将输出的模块写在前面，防止位置错乱引发误解</p>
+<h3 id="全局配置">全局配置</h3><p>上面的例子中重复出现了require.config配置，如果每个页面中都加入配置，必然显得十分不雅，requirejs提供了一种叫”主数据”的功能，我们首先创建一个main.js：</p>
+<pre><code><span class="tag">require</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">paths </span>:<span class="value"> {
+        <span class="string">"jquery"</span> : [<span class="string">"http://libs.baidu.com/jquery/2.0.3/jquery"</span>, <span class="string">"js/jquery"</span>],
+        <span class="string">"a"</span> : <span class="string">"js/a"</span>   
+    </span></span></span>}
+})
+</code></pre><p>然后再页面中使用下面的方式来使用requirejs：</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">data-main</span>=<span class="value">"js/main"</span> <span class="attribute">src</span>=<span class="value">"js/require.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>解释一下，加载requirejs脚本的script标签加入了data-main属性，这个属性指定的js将在加载完reuqire.js后处理，我们把require.config的配置加入到data-main后，就可以使每一个页面都使用这个配置，然后页面中就可以直接使用require来加载所有的短模块名<br>data-main还有一个重要的功能，当script标签指定data-main属性时，require会默认的将data-main指定的js为根路径，是什么意思呢？如上面的data-main=”js/main”设定后，我们在使用require([‘jquery’])后(不配置jquery的paths)，require会自动加载js/jquery.js这个文件，而不是jquery.js，相当于默认配置了：</p>
+<pre><code><span class="tag">require</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">baseUrl </span>:<span class="value"> <span class="string">"js"</span>
+</span></span></span>})
+</code></pre><h3 id="第三方模块">第三方模块</h3><p>通过require加载的模块一般都需要符合AMD规范即使用define来申明模块，但是部分时候需要加载非AMD规范的js，这时候就需要用到另一个功能：shim，shim解释起来也比较难理解，shim直接翻译为”垫”，其实也是有这层意思的，目前我主要用在两个地方<br> 非AMD模块输出，将非标准的AMD模块”垫”成可用的模块，例如：在老版本的jquery中，是没有继承AMD规范的，所以不能直接require[“jquery”],这时候就需要shim，比如我要是用underscore类库，但是他并没有实现AMD规范，那我们可以这样配置</p>
+<pre><code><span class="tag">require</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">shim</span>:<span class="value"> {
+        <span class="string">"underscore"</span> : {
+            exports : <span class="string">"_"</span></span></span>;
+        }</span>
+    }
+})
+</code></pre><p>这样配置后，我们就可以在其他模块中引用underscore模块：<br>require([“underscore”], function(<em>){
+    </em>.each([1,2,3], alert);<br>})<br>插件形式的非AMD模块，我们经常会用到jquery插件，而且这些插件基本都不符合AMD规范，比如jquery.form插件，这时候就需要将form插件”垫”到jquery中：</p>
+<pre><code><span class="tag">require</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">shim</span>:<span class="value"> {
+        <span class="string">"underscore"</span> : {
+            exports : <span class="string">"_"</span></span></span>;
+        }</span>,
+        "<span class="tag">jquery</span><span class="class">.form</span>" : <span class="rules">{
+            <span class="rule"><span class="attribute">deps </span>:<span class="value"> [<span class="string">"jquery"</span>]
+        </span></span></span>}
+    }
+})
+</code></pre><p>也可以简写为：</p>
+<pre><code><span class="tag">require</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">shim</span>:<span class="value"> {
+        <span class="string">"underscore"</span> : {
+            exports : <span class="string">"_"</span></span></span>;
+        }</span>,
+        "<span class="tag">jquery</span><span class="class">.form</span>" : <span class="attr_selector">["jquery"]</span>
+    }
+})
+</code></pre><p>这样配置之后我们就可以使用加载插件后的jquery了</p>
+<pre><code>require.config([<span class="string">"jquery"</span>, <span class="string">"jquery.form"</span>], function($){
+    $(function(){
+        $(<span class="string">"#form"</span>).ajaxSubmit(<span class="decorator">{...}</span>);
+    })
+})
+</code></pre><p>好了，requirejs的基本配置大致就是这么多，还有一些扩展的功能会在之后的篇幅中提到</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/12/06/requirejs_fast/">[转]快速入门RequireJS</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
+  <p><span>发布时间:</span>2015年12月06日 - 15时05分</p>
+  <p><span>最后更新:</span>2015年12月29日 - 20时56分</p>
+  <p>
+    <span>原始链接:</span><a href="/2015/12/06/requirejs_fast/" title="[转]快速入门RequireJS">http://liangbijie.com/2015/12/06/requirejs_fast/</a>
+    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/12/06/requirejs_fast/　　作者: 梁弼杰" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2015/12/06/sassnote/">
+        sass学习笔记
+      </a>
+    </div>
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/01/pic/">
+        【摄影】大西北精选图片
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#requirejs能带来什么好处"><span class="toc-number">1.</span> <span class="toc-text">requirejs能带来什么好处</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#正常编写方式"><span class="toc-number">1.1.</span> <span class="toc-text">正常编写方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#requirejs写法"><span class="toc-number">1.2.</span> <span class="toc-text">requirejs写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本API"><span class="toc-number">2.</span> <span class="toc-text">基本API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加载文件"><span class="toc-number">2.1.</span> <span class="toc-text">加载文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局配置"><span class="toc-number">2.2.</span> <span class="toc-text">全局配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方模块"><span class="toc-number">2.3.</span> <span class="toc-text">第三方模块</span></a></li></ol></li></ol>
+</div>
+<style type="text/css">
+    .left-col .switch-btn {
+        display: none;
+    }
+
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+    var toc_button = document.getElementById("tocButton");
+    var toc_div = document.getElementById("toc");
+    /* Show or hide toc when click on tocButton.
+     通过点击设置的按钮显示或者隐藏文章目录.*/
+    toc_button.onclick = function () {
+        if (toc_div.style.display == "none") {
+            toc_div.style.display = "block";
+            toc_button.value = "隐藏目录";
+            document.getElementById("switch-btn").style.display = "none";
+            document.getElementById("switch-area").style.display = "none";
+        }
+        else {
+            toc_div.style.display = "none";
+            toc_button.value = "显示目录";
+            document.getElementById("switch-btn").style.display = "block";
+            document.getElementById("switch-area").style.display = "block";
+        }
+    }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/12/06/requirejs_fast/" data-title="[转]快速入门RequireJS" data-url="http://liangbijie.com/2015/12/06/requirejs_fast/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liangbijie"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2015/12/06/sassnote/" title="上一篇: sass学习笔记">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/12/01/pic/" title="下一篇: 【摄影】大西北精选图片">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2015 梁弼杰
+      </div>
+        <div class="footer-right">
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

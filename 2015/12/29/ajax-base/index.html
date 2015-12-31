@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+    <!-- 下面一行意思是 梁弼杰的博客 -->
+  <title>带你初步了解AJAX | 梁弼杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导读：本文讲了什么是AJAX，告诉你AJAX到底是个什么鬼">
+<meta property="og:type" content="article">
+<meta property="og:title" content="带你初步了解AJAX">
+<meta property="og:url" content="http://liangbijie.com/2015/12/29/ajax-base/index.html">
+<meta property="og:site_name" content="梁弼杰的博客">
+<meta property="og:description" content="导读：本文讲了什么是AJAX，告诉你AJAX到底是个什么鬼">
+<meta property="og:updated_time" content="2015-12-31T13:50:09.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="带你初步了解AJAX">
+<meta name="twitter:description" content="导读：本文讲了什么是AJAX，告诉你AJAX到底是个什么鬼">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">梁弼杰</a></h1>
+		</hgroup>
+
+		
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/总结">总结</a></li>
+				        
+							<li><a href="/tags/摄影">摄影</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AJAX/" style="font-size: 10px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">专注于前端</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">梁弼杰</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">梁弼杰</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/总结">总结</a></li>
+		        
+					<li><a href="/tags/摄影">摄影</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-ajax-base" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/29/ajax-base/" class="article-date">
+  	<time datetime="2015-12-29T09:07:25.000Z" itemprop="datePublished">2015-12-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      带你初步了解AJAX
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>导读：本文讲了什么是AJAX，告诉你AJAX到底是个什么鬼<a id="more"></a></p>
+<h2 id="什么是AJAX？">什么是AJAX？</h2><p>AJAX 的全称是 Asynchronous JavaScript and XML翻译过来即为异步的 JavaScript 和 XML，简单来讲就是用js异步的去操作XML。<br>AJAX 不是新的编程语言，而是一种使用现有标准的新方法，即就是js里面的一个方法。<br>AJAX 其唯一的功能就是数据交互,即可以从服务器某个地址去拿数据，也可以把数据发送到服务器。<br>AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新<br><strong>优点：</strong></p>
+<ul>
+<li>解决用户的操作的时间，提高用户体验</li>
+<li>不需要插件支持</li>
+<li>减轻服务器和宽带的负担：把传统方式下服务器承担的工作转移到客户端</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>浏览器对XMLHttpRequest对象支持度不足</li>
+<li>破坏浏览器前进、后退按钮的正常功能</li>
+<li>对搜索引擎的支持不足</li>
+<li>开发和调试工具缺乏</li>
+</ul>
+<h2 id="如何使用AJAX">如何使用AJAX</h2><p>这是使用AJAX的五个步骤</p>
+<ul>
+<li>1.创建 XMLHTTPRequest对象</li>
+<li>2.注册回调函数</li>
+<li>3.设置和服务器端的连接信息</li>
+<li>4.发送数据，开始和服务器端进行交互</li>
+<li>5.接受响应数据</li>
+</ul>
+<h3 id="第一步：创建_XMLHttpRequest_对象">第一步：创建 XMLHttpRequest 对象</h3><p>新建一个ajax对象</p>
+<pre><code><span class="keyword">var</span> Xhr=<span class="keyword">new</span> XMLHttpRequest();
+</code></pre><p>这个ie7以上都兼容，Ie6没有XMLHttpRequest()这个对象，其用的是ActiveXObject对象</p>
+<pre><code><span class="keyword">var</span> Xhr=<span class="keyword">new</span> ActiveXObject(‘Microsoft.XMLHTTP’);
+</code></pre><p>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：</p>
+<h4 id="兼容所有浏览器的创建方法一：">兼容所有浏览器的创建方法一：</h4><pre><code><span class="built_in">Var</span> xhr=<span class="built_in">null</span>;
+<span class="keyword">If</span>(window<span class="built_in">.</span>XMLHttpRequest){
+ Xhr= <span class="literal">new</span> XMLHttpRequest（）；
+}<span class="keyword">else</span>{
+ Xhr=<span class="literal">new</span> ActiveXObject(‘Microsoft<span class="built_in">.</span>XMLHTTP’)
+}
+</code></pre><h4 id="兼容所有浏览器的创建方法二：">兼容所有浏览器的创建方法二：</h4><pre><code><span class="keyword">Var</span> xhr=<span class="keyword">null</span>;
+<span class="keyword">try</span> {
+<span class="comment">//代码尝试执行这个块中的内容,如果有错误，则会执行catch{}，并且传入错误信息参数</span>
+ Xhr= <span class="keyword">new</span> XMLHttpRequest（）；
+} <span class="keyword">catch</span> (e) {
+Xhr=<span class="keyword">new</span> ActiveXObject(‘Microsoft.XMLHTTP’)
+}
+</code></pre><h3 id="第二步：注册回调函数">第二步：注册回调函数</h3><p>注册回调函数时，只需要写函数名，不要加括号<br>如果加上括号，就会把函数的返回值注册上，这是错误的</p>
+<pre><code>Xhr.onreadystatechange = callback<span class="comment">;</span>
+</code></pre><h3 id="第三步：设置和服务器端的连接信息">第三步：设置和服务器端的连接信息</h3><p>如需设置即将发送的请求，我们使用 XMLHttpRequest 对象的 open()方法</p>
+<p>open方法使用格式：open(method,url,async)<br>例如：</p>
+<pre><code>Xhr.open(<span class="string">"<span class="keyword">GET</span>"</span>,<span class="string">"demo_get.asp"</span>,true);
+</code></pre><p>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）</p>
+<h4 id="get和post的区别">get和post的区别</h4><p>get<br>  &ensp; &ensp;get方式把数据名称和数据值用=连接，如果有多个的话，那么他会把多个数据组合用&amp;进行连接，然后把数据放到url?后面传到指定页面<br>  &ensp; &ensp;所以用get传输有历史记录和缓存，传送的时候暴露在外面，可能会不安全，<br>  &ensp; &ensp;用get只能传字符串，不能传其他类型<br>  &ensp; &ensp;并且用get传输的url有长度限制，所以不能通过get传送过多数据<br>post<br>  &ensp; &ensp;post方式通过在send()里面传值进行传送<br>  &ensp; &ensp;所以用post不会被缓存，理论上安全<br>  &ensp; &ensp;用post可以传很多类型的数据，并且数据理论上没有限制</p>
+<h4 id="true（异步）和false（同步）的区别">true（异步）和false（同步）的区别</h4><p>异步：非阻塞模式,前面的代码不会影响后面的代码执行<br>&ensp; &ensp;Ajax的工作将会以异步的模式运行<br>&ensp; &ensp;在进行ajax 的工作同时执行其下面代码<br>同步：阻塞模式,前面的代码会影响到后面的代码执行<br>&ensp; &ensp;Ajax的工作将会以同步的模式运行<br>&ensp; &ensp;在ajax完成后才能进行其下面代码</p>
+<h3 id="第四步：发送数据，开始和服务器端进行交互">第四步：发送数据，开始和服务器端进行交互</h3><p>如需发送的设置好的请求，我们使用 XMLHttpRequest 对象的 send()方法</p>
+<h4 id="Get和post传送数据问题">Get和post传送数据问题</h4><p>Get方式传递数据要注意的问题<br>缓存<br>&ensp; &ensp;会导致不能实时更新<br>&ensp; &ensp;url会被缓存，第二次请求的时候读的是缓存的内容而不是从服务器获取内容<br>&ensp; &ensp;解决办法：在url问号后面后面连接一个随机数或者时间戳</p>
+<pre><code>xhr.<span class="keyword">open</span>('<span class="keyword">get</span>','<span class="number">2.</span><span class="keyword">get</span>.php?username=liangbijie&amp;age=<span class="number">19</span>&amp;’+ new Date().getTime(),<span class="literal">true</span>);
+xhr.send();    
+</code></pre><p>乱码<br>&ensp; &ensp;传递中文会导致乱码<br>&ensp; &ensp;解决办法：把中文进行编码传输<code>encodeURI()</code>；</p>
+<pre><code>xhr.open(<span class="string">'get'</span>,<span class="string">'2.get.php?username='</span>+<span class="built_in">encodeURI</span>(<span class="string">'梁弼杰'</span>)+<span class="string">'&amp;age=19&amp;'</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(),<span class="literal">true</span>);
+xhr.send();
+</code></pre><p>Post方式传递数据要注意的问题<br>&ensp; &ensp;post方式，数据放在send()里面作为参数传递</p>
+<pre><code>xhr.<span class="built_in">open</span>(<span class="string">'post'</span>,<span class="string">'2.post.php'</span>,<span class="keyword">true</span>);
+xhr.setRequestHeader(<span class="string">'content-type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);<span class="comment">//申明发送的数据类型</span>
+xhr.send(<span class="string">'username=梁弼杰&amp;age=19'</span>);
+</code></pre><p>&ensp; &ensp;post没有缓存问题并且无需编码</p>
+<h3 id="第五步：接受响应数据">第五步：接受响应数据</h3><p>如果服务器返回数据成功，则可以使用XMLHttpRequest对象的 responseText 或 responseXML 属性。<br>responseText是获得字符串形式的响应数据。<br>responseXML是获得 XML 形式的响应数据。<br>responseText数据使用例子：</p>
+<pre><code><span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=Xhr.responseText;
+</code></pre><p>responseXML数据解析例子：<br>如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析</p>
+<pre><code>xmlDoc=xmlhttp.responseXML<span class="comment">;</span>
+txt=<span class="string">""</span><span class="comment">;</span>
+x=xmlDoc.getElementsByTagName(<span class="string">"ARTIST"</span>)<span class="comment">;</span>
+<span class="keyword">for</span> (i=<span class="number">0</span><span class="comment">;i&lt;x.length;i++)</span>
+  {
+  txt=txt + x[i].childNodes[<span class="number">0</span>].nodeValue + <span class="string">"&lt;br /&gt;"</span><span class="comment">;</span>
+  }
+document.getElementById(<span class="string">"myDiv"</span>).innerHTML=txt<span class="comment">;</span>
+</code></pre><h4 id="XMLHttpRequest对象的三个重要的属性：">XMLHttpRequest对象的三个重要的属性：</h4><ul>
+<li>onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</li>
+<li>readyState 存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。</li>
+<li>status 服务器响应的状态码</li>
+</ul>
+<p><strong>onreadystatechange</strong><br>&ensp; &ensp;当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>&ensp; &ensp;每当 readyState 改变时，就会触发 onreadystatechange 事件。</p>
+<p><strong>readyState</strong><br>ajax工作状态（可以根据这个知道ajax是否完成）</p>
+<ul>
+<li>0: （初始化）还没有调用open()方法 </li>
+<li>1: （载入）已调用send()方法，正在发送请求 </li>
+<li>2: （载入完成）send()方法完成，已收到全部响应内容 </li>
+<li>3: （解析）正在解析响应内容 </li>
+<li>4: （完成）响应内容解析完成，可以在客户端调用了 </li>
+</ul>
+<p><strong>status</strong><br><strong>1xx  (临时响应)</strong><br>表示临时响应并需要请求者继续执行操作的状态代码。<br>详细代码及说明:</p>
+<ul>
+<li>HTTP: Status 100 (继续)<br>-&gt; 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。</li>
+<li>HTTP: Status 101 (切换协议)<br>-&gt; 请求者已要求服务器切换协议，服务器已确认并准备切换。</li>
+</ul>
+<p><strong>2xx  (成功)</strong><br>-&gt;表示成功处理了请求的状态代码;<br>详细代码及说明:</p>
+<ul>
+<li>HTTP Status 200 (成功)<br>-&gt; 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。</li>
+<li>HTTP Status 201 (已创建)<br>-&gt; 请求成功并且服务器创建了新的资源。</li>
+<li>HTTP Status 202 (已接受)<br>-&gt; 服务器已接受请求，但尚未处理。</li>
+<li>HTTP Status 203 (非授权信息)<br>-&gt; 服务器已成功处理了请求，但返回的信息可能来自另一来源。</li>
+<li>HTTP Status 204 (无内容)<br>-&gt; 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>HTTP Status 205 (重置内容)<br>-&gt; 服务器成功处理了请求，但没有返回任何内容。</li>
+<li>HTTP Status 206 (部分内容)<br>-&gt; 服务器成功处理了部分 GET 请求。</li>
+</ul>
+<p><strong>3xx (重定向)</strong><br>-&gt;这些状态代码表示用户代理要想完成请求，还需要发出进一步的操作。这些操作只有当后跟的请求是GET或HEAD时，才可由用户代理来实现，而不用与用户进行交互。</p>
+<ul>
+<li>HTTP Status 300<br>-&gt;  客户请求的文档可以在多个位置找到，这些位置已经在返回的文档内列出。如果服务器要提出优先选择，则应该在Location应答头指明。</li>
+<li>HTTP Status 301 Moved Permanently<br>-&gt;  客户请求的文档在其他地方，新的URL在Location头中给出，浏览器应该自动地访问新的URL。</li>
+<li>HTTP Status 302 Moved Temporarily<br>-&gt;类似于301，但新的URL应该被视为临时性的替代，而不是永久性的。</li>
+<li>HTTP Status 303 See Other<br>-&gt;类似于301/302，不同之处在于，如果原来的请求是POST，Location头指定的重定向目标文档应该通过GET提取</li>
+<li>HTTP Status 304 Not Modified<br>-&gt;  客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。</li>
+<li>HTTP Status 305 Use Proxy<br>-&gt;  客户请求的文档应该通过Location头所指明的代理服务器提取</li>
+<li>HTTP Status 307 Temporary Redirect<br>-&gt;  和302（Found）相同。许多浏览器会错误地响应302应答进行重定向，即使原来的请求是 POST，即使它实际上只能在POST请求的应答是303时才能重定向。由于这个原因，HTTP 1.1新增了307，以便更加清除地区分几个状态代码： 当出现303应答时，浏览器可以跟随重定向的GET和POST请求；如果是307应答，则浏览器只能跟随对GET请求的重定向。</li>
+</ul>
+<p><strong>4xx (请求错误)</strong><br>-&gt;这些状态代码表示请求可能出错，妨碍了服务器的处理。</p>
+<p>详细代码说明:</p>
+<ul>
+<li>HTTP Status 400 （错误请求）<br>-&gt;服务器不理解请求的语法。</li>
+<li>HTTP Status 401 （未授权）<br>-&gt;请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。</li>
+<li>HTTP Status 403 （禁止）<br>-&gt; 服务器拒绝请求。</li>
+<li>HTTP Status 404 （未找到）<br>-&gt;服务器找不到请求的网页。</li>
+<li>HTTP Status 405 （方法禁用）<br>-&gt;禁用请求中指定的方法。</li>
+<li>HTTP Status 406 （不接受）<br>-&gt;无法使用请求的内容特性响应请求的网页。</li>
+<li>HTTP Status 407 （需要代理授权）<br>-&gt;此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。</li>
+<li>HTTP Status 408 （请求超时）<br>-&gt;服务器等候请求时发生超时。</li>
+<li>HTTP Status 409 （冲突）<br>-&gt;服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。</li>
+<li>HTTP Status 410 （已删除）<br>-&gt; 如果请求的资源已永久删除，服务器就会返回此响应。</li>
+<li>HTTP Status 411 （需要有效长度）<br>-&gt;服务器不接受不含有效内容长度标头字段的请求。</li>
+<li>HTTP Status 412 （未满足前提条件）<br>-&gt;服务器未满足请求者在请求中设置的其中一个前提条件。</li>
+<li>HTTP Status 413 （请求实体过大）<br>-&gt;服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。</li>
+<li>HTTP Status 414 （请求的 URI 过长） 请求的 URI（通常为网址）过长，服务器无法处理。</li>
+<li>HTTP Status 415 （不支持的媒体类型）<br>-&gt;请求的格式不受请求页面的支持。</li>
+<li>HTTP Status 416 （请求范围不符合要求）<br>-&gt;如果页面无法提供请求的范围，则服务器会返回此状态代码。</li>
+<li>HTTP Status 417 （未满足期望值）<br>-&gt;服务器未满足”期望”请求标头字段的要求。<br>说明</li>
+</ul>
+<p><strong>5xx （服务器错误）</strong><br>-&gt;这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。</p>
+<p>代码详细及说明:</p>
+<ul>
+<li>HTTP Status 500 （服务器内部错误）<br>-&gt;服务器遇到错误，无法完成请求。</li>
+<li>HTTP Status 501 （尚未实施）<br>-&gt;服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。</li>
+<li>HTTP Status 502 （错误网关）<br>-&gt;服务器作为网关或代理，从上游服务器收到无效响应。</li>
+<li>HTTP Status 503 （服务不可用）<br>-&gt; 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。</li>
+<li>HTTP Status 504 （网关超时）<br>-&gt;服务器作为网关或代理，但是没有及时从上游服务器收到请求。</li>
+<li>HTTP Status 505 （HTTP 版本不受支持）<br>-&gt; 服务器不支持请求中所用的 HTTP 协议版本。</li>
+</ul>
+<h4 id="判断是否成功返回数据">判断是否成功返回数据</h4><pre><code>xhr.onreadystatechange = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+    <span class="keyword">if</span> ( xhr.readyState == <span class="number">4</span> ) {
+        <span class="keyword">if</span> ( xhr.status == <span class="number">200</span> ) {
+            alert( xhr.responseText );<span class="comment">//这里表示成功返回数据，然后操作返回来的数据</span>
+        } <span class="keyword">else</span> {
+            alert(<span class="string">'出错了,Err：'</span> + xhr.status);
+        }
+    }
+}
+</code></pre><h4 id="如何使用服务器返回来的json数据">如何使用服务器返回来的json数据</h4><p>首先我们要明白后台传过来的json不是数组而是字符串，那我们怎么去利用这个字符串得到我们想要的呢？<br>不用担心，JS现在有一个对象JSON的Parse()方法可以把字符串转成数组。Stringify（）这个方法可以把数组和json转成字符串<br>这个对象不是所有浏览器都支持，ie7及其以下不支持<br>解决办法：我们可以进入网址json.org 找到JavaScriptjson语言包（js文件）把这个语言包引入进来，就可以支持ie7了</p>
+<p>下面是使用json数据实例</p>
+<pre><code><span class="keyword">var</span> oBtn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>); <span class="comment">//找到节点</span>
+    oBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+        <span class="keyword">var</span> xhr = <span class="literal">null</span>;
+        <span class="keyword">try</span> {
+            xhr = <span class="keyword">new</span> XMLHttpRequest();
+        } <span class="keyword">catch</span> (e) {
+            xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>);
+        }
+
+        xhr.open(<span class="string">'get'</span>,<span class="string">'getNews.php'</span>,<span class="literal">true</span>); 
+        xhr.send();                    <span class="comment">//发送AJAX请求</span>
+
+        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+
+            <span class="keyword">if</span> ( xhr.readyState == <span class="number">4</span> ) {
+                <span class="keyword">if</span> ( xhr.status == <span class="number">200</span> ) {
+                    <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse( xhr.responseText ); <span class="comment">//将字符串变成数组</span>
+                    <span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">'ul1'</span>);
+                    <span class="keyword">var</span> html = <span class="string">''</span>;
+                    <span class="comment">//解析json数据</span>
+                    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;data.length; i++) {
+                        html += <span class="string">'&lt;li&gt;&lt;a href=""&gt;'</span>+data[i].title+<span class="string">'&lt;/a&gt; [&lt;span&gt;'</span>+data[i].date+<span class="string">'&lt;/span&gt;]&lt;/li&gt;'</span>;
+                    }
+                    oUl.innerHTML = html;
+                } <span class="keyword">else</span> {
+                    alert(<span class="string">'出错了,Err：'</span> + xhr.status);
+                }
+            }
+
+        }
+
+    }
+</code></pre><h2 id="封装AJAX">封装AJAX</h2><pre><code>function ajax(<span class="keyword">method</span>, url, data, success) {
+    <span class="keyword">var</span> xhr = null;
+    <span class="keyword">try</span> {
+        xhr = new <span class="type">XMLHttpRequest</span>();
+    } catch (e) {
+        xhr = new <span class="type">ActiveXObject</span>('<span class="type">Microsoft</span>.<span class="type">XMLHTTP</span>');
+    }
+
+    <span class="keyword">if</span> (<span class="keyword">method</span> == 'get' &amp;&amp; data) {
+        url += '?' + data;
+    }
+
+    xhr.open(<span class="keyword">method</span>,url,<span class="literal">true</span>);
+    <span class="keyword">if</span> (<span class="keyword">method</span> == 'get') {
+        xhr.send();
+    } <span class="keyword">else</span> {
+        xhr.setRequestHeader('content-<span class="keyword">type</span>', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+    }
+
+    xhr.onreadystatechange = function() {
+
+        <span class="keyword">if</span> ( xhr.readyState == <span class="number">4</span> ) {
+            <span class="keyword">if</span> ( xhr.status == <span class="number">200</span> ) {
+                success &amp;&amp; success(xhr.responseText);
+            } <span class="keyword">else</span> {
+                alert('出错了,<span class="type">Err</span>：' + xhr.status);
+            }
+        }
+
+    }
+}
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/12/29/ajax-base/">带你初步了解AJAX</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
+  <p><span>发布时间:</span>2015年12月29日 - 17时07分</p>
+  <p><span>最后更新:</span>2015年12月31日 - 21时50分</p>
+  <p>
+    <span>原始链接:</span><a href="/2015/12/29/ajax-base/" title="带你初步了解AJAX">http://liangbijie.com/2015/12/29/ajax-base/</a>
+    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2015/12/29/ajax-base/　　作者: 梁弼杰" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/08/BFC/">
+        揭秘BFC，简单粗暴（未完）
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是AJAX？"><span class="toc-number">1.</span> <span class="toc-text">什么是AJAX？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用AJAX"><span class="toc-number">2.</span> <span class="toc-text">如何使用AJAX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：创建_XMLHttpRequest_对象"><span class="toc-number">2.1.</span> <span class="toc-text">第一步：创建 XMLHttpRequest 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#兼容所有浏览器的创建方法一："><span class="toc-number">2.1.1.</span> <span class="toc-text">兼容所有浏览器的创建方法一：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#兼容所有浏览器的创建方法二："><span class="toc-number">2.1.2.</span> <span class="toc-text">兼容所有浏览器的创建方法二：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步：注册回调函数"><span class="toc-number">2.2.</span> <span class="toc-text">第二步：注册回调函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步：设置和服务器端的连接信息"><span class="toc-number">2.3.</span> <span class="toc-text">第三步：设置和服务器端的连接信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#get和post的区别"><span class="toc-number">2.3.1.</span> <span class="toc-text">get和post的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#true（异步）和false（同步）的区别"><span class="toc-number">2.3.2.</span> <span class="toc-text">true（异步）和false（同步）的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步：发送数据，开始和服务器端进行交互"><span class="toc-number">2.4.</span> <span class="toc-text">第四步：发送数据，开始和服务器端进行交互</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Get和post传送数据问题"><span class="toc-number">2.4.1.</span> <span class="toc-text">Get和post传送数据问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五步：接受响应数据"><span class="toc-number">2.5.</span> <span class="toc-text">第五步：接受响应数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XMLHttpRequest对象的三个重要的属性："><span class="toc-number">2.5.1.</span> <span class="toc-text">XMLHttpRequest对象的三个重要的属性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断是否成功返回数据"><span class="toc-number">2.5.2.</span> <span class="toc-text">判断是否成功返回数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#如何使用服务器返回来的json数据"><span class="toc-number">2.5.3.</span> <span class="toc-text">如何使用服务器返回来的json数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装AJAX"><span class="toc-number">3.</span> <span class="toc-text">封装AJAX</span></a></li></ol>
+</div>
+<style type="text/css">
+    .left-col .switch-btn {
+        display: none;
+    }
+
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+    var toc_button = document.getElementById("tocButton");
+    var toc_div = document.getElementById("toc");
+    /* Show or hide toc when click on tocButton.
+     通过点击设置的按钮显示或者隐藏文章目录.*/
+    toc_button.onclick = function () {
+        if (toc_div.style.display == "none") {
+            toc_div.style.display = "block";
+            toc_button.value = "隐藏目录";
+            document.getElementById("switch-btn").style.display = "none";
+            document.getElementById("switch-area").style.display = "none";
+        }
+        else {
+            toc_div.style.display = "none";
+            toc_button.value = "显示目录";
+            document.getElementById("switch-btn").style.display = "block";
+            document.getElementById("switch-area").style.display = "block";
+        }
+    }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/12/29/ajax-base/" data-title="带你初步了解AJAX" data-url="http://liangbijie.com/2015/12/29/ajax-base/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liangbijie"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2015/12/08/BFC/" title="下一篇: 揭秘BFC，简单粗暴（未完）">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2015 梁弼杰
+      </div>
+        <div class="footer-right">
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

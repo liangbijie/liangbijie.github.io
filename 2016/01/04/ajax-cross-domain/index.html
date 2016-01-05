@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+    <!-- 下面一行意思是 梁弼杰的博客 -->
+  <title>AJAX之跨域 | 梁弼杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导读：跨域的一些基本问题和用JSONP的解决办法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX之跨域">
+<meta property="og:url" content="http://liangbijie.com/2016/01/04/ajax-cross-domain/index.html">
+<meta property="og:site_name" content="梁弼杰的博客">
+<meta property="og:description" content="导读：跨域的一些基本问题和用JSONP的解决办法">
+<meta property="og:updated_time" content="2016-01-05T15:41:16.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AJAX之跨域">
+<meta name="twitter:description" content="导读：跨域的一些基本问题和用JSONP的解决办法">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">梁弼杰</a></h1>
+		</hgroup>
+
+		
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/总结">总结</a></li>
+				        
+							<li><a href="/tags/摄影">摄影</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/AJAX/" style="font-size: 13.33px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 16.67px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">专注于前端</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">梁弼杰</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="http://i5.tietuku.com/ae49905f5e39d32c.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">梁弼杰</a></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/总结">总结</a></li>
+		        
+					<li><a href="/tags/摄影">摄影</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:773686431@qq.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/liangbijie" title="GitHub"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/773686431" title="QQ"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-ajax-cross-domain" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/04/ajax-cross-domain/" class="article-date">
+  	<time datetime="2016-01-04T13:41:25.000Z" itemprop="datePublished">2016-01-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AJAX之跨域
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>导读：跨域的一些基本问题和用JSONP的解决办法<a id="more"></a></p>
+<h1 id="什么是跨域？">什么是跨域？</h1><p><strong>浏览器</strong>出于安全方面的考虑，不允许JavaScript跨域调用其他页面的对象，这就是浏览器的<strong>同源策略</strong>。<br>比如来说：<br>对于<a href="http://www.a.com/1.html" target="_blank" rel="external">http://www.a.com/1.html</a> 来说</p>
+<ul>
+<li><a href="http://www.a.com/2.html" target="_blank" rel="external">http://www.a.com/2.html</a> 与其是同源的；</li>
+<li><a href="http://www.a.com/comment/2.html" target="_blank" rel="external">http://www.a.com/comment/2.html</a> 与其是同源的；</li>
+<li><a href="http://www.b.com/2.html" target="_blank" rel="external">http://www.b.com/2.html</a> 与其是不同源的。 原因：域名不同；</li>
+<li><a href="http://www.a.com/2.html" target="_blank" rel="external">http://www.a.com/2.html</a> 与其是不同源的。原因：同一个域名，但是二级域名不一样；</li>
+<li><a href="https://www.a.com/2.html" target="_blank" rel="external">https://www.a.com/2.html</a> 与其是不同源的。原因：协议不同；</li>
+<li><a href="http://www.a.com:8080/2.html" target="_blank" rel="external">http://www.a.com:8080/2.html</a> 与其是不同源的。原因：端口不同；</li>
+<li><a href="http://sub.a.com/2.html" target="_blank" rel="external">http://sub.a.com/2.html</a> 与其是不同源的。原因：主机不同。</li>
+<li><a href="http://70.32.92.74/2.html" target="_blank" rel="external">http://70.32.92.74/2.html</a> 与其是不同源的。原因：在跨域问题上，域仅仅是通过“URL的首部”来识别而不会去尝试判断相同的ip地址对应着两个域或两个域是否在同一个ip上。</li>
+</ul>
+<p>所以在a.com 域名下的js无法操作b.com或其他域名下的对象，只能操作二级域名、端口、协议必须与主页面<strong>完全相同</strong>，否则就算<strong>跨域</strong>。</p>
+<h1 id="为什么要跨域？">为什么要跨域？</h1><p><code>&lt;script type=&quot;text/java script&quot;src=&quot;https://aja x.googleapis.com/aj ax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>上面代码就是跨域去加载Google的jQuery，这样做的好处就是加载时间少了，而且减少了服务器的流量。<br>其实跨域这东西很常见，把网站的一些脚本、图片或其他资源放到另外一个站点，这些操作都是跨域。</p>
+<p>在浏览器中，<code>&lt;script&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;iframe&gt;</code>和<code>&lt;link&gt;</code>这几个标签（我发现凡是拥有”src”这个属性的标签都拥有跨域的能力）是可以加载跨域（非同源）的资源的，并且加载的方式其实相当于一次普通的GET请求，唯一不同的是，为了安全起见，浏览器<strong>不允许</strong>这种方式下对加载到的资源的<strong>读写操作</strong>，而只能使用标签本身应当具备的能力（比如脚本执行、样式应用等等）。默认情况下，跨域的URL是<strong>无法通过Ajax访问</strong>的。</p>
+<p>有时候我们需要的不仅仅是一些脚本、图片这样的资源，我们也会希望从另外的站点调用一些数据，例如我希望获取一些blog的RSS来生成一些内容，再或者说我在“人人开放平台”上开发一个应用，需要调用人人的数据。<br>然而，很不幸的是，用ajax请求一个第三方的地址是被浏览器所禁止的，直接用XMLHttpRequest来Get或者Post行不通。<br>但是，天无绝人之路，有个叫JSONP的技术就是来解决这种问题的。原理是在远程服务器上设法把数据装进js格式的文件里，供客户端调用和进一步处理。下面我们就来讨论如何解决跨域问题。</p>
+<h1 id="怎么解决跨域问题？">怎么解决跨域问题？</h1><p>解决跨域问题有很多办法，八仙过海，各显神通。接下来就将介绍一种很常见的解决跨域的办法：JSONP</p>
+<h2 id="什么是JSONP?">什么是JSONP?</h2><p>看到这个专有名词，可能会想到JSON，虽然JSON和JSONP只有一个字母的差别，但其实他们根本不是一回事儿。<br>JSON是一种数据交换格式，而JSONP是一种依靠开发人员的聪明才智创造出的一种非官方跨域数据交互协议。<br>可以这么来讲吧json 是一种数据格式，jsonp 是一种数据调用的方式。<br>上文讲到<code>&lt;script&gt;</code>标签没有跨域限制的，所以我们可以利用这个“漏洞”来达到第三方通讯的目的。当需要通讯时，就可以创建一个<code>&lt;script&gt;</code>元素，地址指向第三方API网址，形如：<code>&lt;script src=&quot;http://www.example.net/api?param1=1&amp;param2=2&quot;&gt;&lt;/script&gt;</code>并提供一个回调函数来接收数据（函数名可约定，或通过地址参数传递）。第三方产生的响应为json数据的包装。（所以称之为jsonp，即json padding）包装形如：<code>callback({&quot;name&quot;:&quot;hax&quot;,&quot;gender&quot;:&quot;Male&quot;})</code>这样浏览器会调用callback函数，并传递解析后json对象作为参数。可在callback函数里处理所传入的数据。</p>
+<h2 id="JSONP如何工作的？">JSONP如何工作的？</h2><p>接下来我将循序渐进的来解释JSONP的原理<br><strong>上文说到<code>&lt;script&gt;</code>标签是可以加载跨域（非同源）的资源的</strong><br>远程服务器a.com根目录下有个test.js文件代码如下：</p>
+<pre><code>alert(<span class="string">'我是远程文件'</span>);
+</code></pre><p>本地服务器local.com下有个localtest.html页面代码如下：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://a.com/test.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>运行localtest.html页面后，毫无疑问会弹出“我是远程文件”的提示窗口，表示跨域调用成功。</p>
+<p><strong>现在我们在localtest.html页面定义一个函数，通过远程js来调用这个函数，并且传入参数。</strong><br>localtest.html页面代码如下：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript">
+    <span class="keyword">var</span> localHandler = <span class="function"><span class="keyword">function</span><span class="params">(data)</span></span>{
+        alert(<span class="string">'我是本地函数，可以被跨域的test.js文件调用，远程js带来的数据是：'</span> + data.result);
+    };
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://remoteserver.com/remote.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>test.js文件代码如下：</p>
+<pre><code><span class="built_in">local</span>Handler({<span class="string">"result"</span>:<span class="string">"我是远程js带来的数据"</span>});
+</code></pre><p>运行localtest.html页面后查看结果，页面成功弹出提示窗口，显示本地函数被跨域的远程js调用成功，并且还接收到了远程js带来的数据。</p>
+<p><strong>很神奇，跨域远程获取数据的目的基本实现了，但是又一个问题出现了，我怎么让远程js知道它应该调用的本地函数叫什么名字呢？（这里是localHandler()）毕竟是jsonp的服务者都要面对很多服务对象，而这些服务对象各自的本地函数都不相同啊？</strong><br>接下来我们解决这个问题：<br>现在只要服务端提供的js脚本是动态生成的就行了，这样调用者可以传一个参数过去告诉服务端需要的数据并告诉服务器我的回调函数叫什么名字，于是服务器就可以按照客户端的需求来生成js脚本并响应了。<br>localtest.html页面的代码：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="comment">// 得到航班信息查询结果后的回调函数</span>
+    <span class="keyword">var</span> flightHandler = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{
+        alert(<span class="string">'你查询的航班结果是：票价 '</span> + data.price + <span class="string">' 元，'</span> + <span class="string">'余票 '</span> + data.tickets + <span class="string">' 张。'</span>);
+    };
+    <span class="comment">// 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）</span>
+    <span class="keyword">var</span> url = <span class="string">"http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&amp;callback=flightHandler"</span>;
+    <span class="comment">// 创建script标签，设置其属性</span>
+    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);
+    script.setAttribute(<span class="string">'src'</span>, url);
+    <span class="comment">// 把script标签加入head，此时调用开始</span>
+    <span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appendChild(script); 
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>这次没有把远程js文件写死，而是编码实现动态查询，而这也正是jsonp客户端实现的核心部分，本例中的重点也就在于如何完成jsonp调用的全过程。我们看到调用的url中传递了一个code参数，告诉服务器我要查的是CA1998次航班的信息，而callback参数则告诉服务器，我的本地回调函数叫做flightHandler，所以请把查询结果传入这个函数中进行调用。<br>OK，服务器很聪明，这个叫做flightResult.aspx的页面生成了一段这样的代码提供给localtest.html<br>（服务端的实现这里就不演示了，与你选用的语言无关，说到底就是拼接字符串）：</p>
+<pre><code>flightHandler({
+    <span class="string">"code"</span>: <span class="string">"CA1998"</span>,
+    <span class="string">"price"</span>: <span class="number">1780</span>,
+    <span class="string">"tickets"</span>: <span class="number">5</span>
+});
+</code></pre><p>我们看到，传递给flightHandler函数的是一个json，它描述了航班的基本信息。运行一下页面，成功弹出提示窗口<br><strong>到这里为止的话，相信你已经能够理解jsonp的客户端实现原理了吧？剩下的就是如何把代码封装一下，以便于与用户界面交互，从而实现多次和重复调用。</strong></p>
+<h2 id="jQuery如何实现jsonp调用？">jQuery如何实现jsonp调用？</h2><p>这里依然沿用上面那个航班信息查询的例子，假定返回jsonp结果不变：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+ <span class="tag">&lt;<span class="title">html</span> <span class="attribute">xmlns</span>=<span class="value">"http://www.w3.org/1999/xhtml"</span> &gt;</span>
+ <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">title</span>&gt;</span>Untitled Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+     jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
+        $.ajax({
+             type: <span class="string">"get"</span>,
+             <span class="keyword">async</span>: <span class="literal">false</span>,
+             url: <span class="string">"http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998"</span>,
+             dataType: <span class="string">"jsonp"</span>,
+             jsonp: <span class="string">"callback"</span>,<span class="comment">//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(一般默认为:callback)</span>
+             jsonpCallback:<span class="string">"flightHandler"</span>,<span class="comment">//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以写"?"，jQuery会自动为你处理数据</span>
+             success: <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>{
+                 alert(<span class="string">'您查询到航班信息：票价： '</span> + json.price + <span class="string">' 元，余票： '</span> + json.tickets + <span class="string">' 张。'</span>);
+             },
+             error: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+                 alert(<span class="string">'fail'</span>);
+             }
+         });
+     });
+     </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+     <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+ <span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>是不是有点奇怪？为什么我这次没有写flightHandler这个函数呢？而且竟然也运行成功了！<br>这就是jQuery的功劳了，jquery在处理jsonp类型的ajax时（但是实际上，jsonp压根不是通过ajax来实现的），自动帮你生成回调函数并把数据取出来供success属性方法来调用。</p>
+<p>说道这儿，很多人也许就恍然大悟了。JSONP名字听着高端，其实也不过如此嘛。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/01/04/ajax-cross-domain/">AJAX之跨域</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
+  <p><span>发布时间:</span>2016年01月04日 - 21时41分</p>
+  <p><span>最后更新:</span>2016年01月05日 - 23时41分</p>
+  <p>
+    <span>原始链接:</span><a href="/2016/01/04/ajax-cross-domain/" title="AJAX之跨域">http://liangbijie.com/2016/01/04/ajax-cross-domain/</a>
+    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2016/01/04/ajax-cross-domain/　　作者: 梁弼杰" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/29/ajax-base/">
+        带你初步了解AJAX
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是跨域？"><span class="toc-number">1.</span> <span class="toc-text">什么是跨域？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要跨域？"><span class="toc-number">2.</span> <span class="toc-text">为什么要跨域？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#怎么解决跨域问题？"><span class="toc-number">3.</span> <span class="toc-text">怎么解决跨域问题？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是JSONP?"><span class="toc-number">3.1.</span> <span class="toc-text">什么是JSONP?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSONP如何工作的？"><span class="toc-number">3.2.</span> <span class="toc-text">JSONP如何工作的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery如何实现jsonp调用？"><span class="toc-number">3.3.</span> <span class="toc-text">jQuery如何实现jsonp调用？</span></a></li></ol></li></ol>
+</div>
+<style type="text/css">
+    .left-col .switch-btn {
+        display: none;
+    }
+
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+    var toc_button = document.getElementById("tocButton");
+    var toc_div = document.getElementById("toc");
+    /* Show or hide toc when click on tocButton.
+     通过点击设置的按钮显示或者隐藏文章目录.*/
+    toc_button.onclick = function () {
+        if (toc_div.style.display == "none") {
+            toc_div.style.display = "block";
+            toc_button.value = "隐藏目录";
+            document.getElementById("switch-btn").style.display = "none";
+            document.getElementById("switch-area").style.display = "none";
+        }
+        else {
+            toc_div.style.display = "none";
+            toc_button.value = "显示目录";
+            document.getElementById("switch-btn").style.display = "block";
+            document.getElementById("switch-area").style.display = "block";
+        }
+    }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/01/04/ajax-cross-domain/" data-title="AJAX之跨域" data-url="http://liangbijie.com/2016/01/04/ajax-cross-domain/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liangbijie"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2015/12/29/ajax-base/" title="下一篇: 带你初步了解AJAX">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 梁弼杰
+      </div>
+        <div class="footer-right">
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+  <style>
+    body {
+      background: lightgray;
+    }
+    #container .left-col {
+      background: white;
+    }
+    .article-inner {
+      background: white;
+    }
+    .post-nav-button {
+      background: #ececec;
+    }
+    #header .header-nav .social #GitHub {
+      background-color: #bfd3ec;
+    }
+  </style>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

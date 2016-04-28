@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://liangbijie.com/2016/03/22/Git/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
 <meta property="og:description" content="导读：Git的一些常用命令，用来当做手册来查找">
-<meta property="og:updated_time" content="2016-03-22T11:35:45.028Z">
+<meta property="og:updated_time" content="2016-03-31T08:44:59.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git基础操作，满足你的项目需求">
 <meta name="twitter:description" content="导读：Git的一些常用命令，用来当做手册来查找">
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+						<a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/作用域/" style="font-size: 10px;">作用域</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a> <a href="/tags/高性能JavaScript/" style="font-size: 10px;">高性能JavaScript</a>
 					</div>
 				</section>
 				
@@ -235,7 +235,16 @@
       
         
         <p>导读：Git的一些常用命令，用来当做手册来查找<a id="more"></a></p>
-<h2 id="Git_常用命令">Git 常用命令</h2><p><code>mkdir</code> 创建一个文件夹<br><code>pwd</code>   显示当前目录<br><code>git init</code>  把当前目录变成git可以管理的仓库<br><code>ls -ah</code>  可以看到隐藏目录  如.git文件<br><code>git status</code>  让我们时刻掌握仓库当前的状态,可以随时掌握工作区的状态<br><code>git diff</code> 可以查看修改的内容<br><code>git reset --hard HEAD^</code> 可以回退到上一个版本<br><code>git reflog</code> 记录每一次命令操作（可以用来查看命令历史，以便确定要回到未来的哪个版本）<br><code>git log</code>  可以看到每一次提交的版本<br><code>cat</code>   打开某一个文件<br><code>HEAD</code> 表示当前版本<br><code>HEAD^</code> 表示上一个版本<br><code>HEAD^</code> 表示上上个版本<br><code>git reset --hard 3628164</code>  3628164表示版本号，通过git log可以看到版本号，版本号没必要写全，前几位就可以了，Git会自动去找<br><code>git checkout -- file</code>  丢弃工作区的修改<br><code>git checkout</code> 用版本库里的版本替换工作区的版本<br><code>git reset HEAD file</code> 让暂存区的文件到工作区<br><code>git remote add origin git@github.com:liangbijie/-test01.git</code>  关联远程库<br><code>git push -u origin master</code>  第一次推送master分支的所有内容<br><code>git remote -v</code>  可以查看本地参考关联的远程仓库地址<br><code>git rm</code> 删除文件（+git commit 是删除远程仓库文件； +git checkout – file 误删还原（从远程仓库拉下来）   ）</p>
+<h2 id="Git_常用命令">Git 常用命令</h2><p><code>mkdir</code> 创建一个文件夹<br><code>pwd</code>   显示当前目录<br><code>git init</code>  把当前目录变成git可以管理的仓库<br><code>ls -ah</code>  可以看到隐藏目录  如.git文件<br><code>git status</code>  让我们时刻掌握仓库当前的状态,可以随时掌握工作区的状态</p>
+<pre><code>$ git status
+<span class="keyword">On</span> branch master
+Your branch <span class="keyword">is</span> up-<span class="keyword">to</span>-<span class="built_in">date</span> <span class="keyword">with</span> <span class="comment">'origin/master'.</span>
+Changes <span class="keyword">to</span> be committed:
+  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)
+        modified:   src/.idea/workspace.xml
+        modified:   src/main/webapp/<span class="keyword">static</span>/js/page/user/userInfo.js
+</code></pre><p>这段话表示有两个文件被修改了</p>
+<p><code>git diff</code> 可以查看修改的内容(比较当前文件和暂存区文件差异)<br><code>git reset --hard HEAD^</code> 可以回退到上一个版本<br><code>git reflog</code> 记录每一次命令操作（可以用来查看命令历史，以便确定要回到未来的哪个版本）<br><code>git log</code>  可以看到每一次提交的版本<br><code>cat</code>   打开某一个文件<br><code>HEAD</code> 表示当前版本<br><code>HEAD^</code> 表示上一个版本<br><code>HEAD^^</code> 表示上上个版本<br><code>git reset --hard 3628164</code>  3628164表示版本号，通过git log可以看到版本号，版本号没必要写全，前几位就可以了，Git会自动去找<br><code>git checkout -- file</code>  丢弃工作区的修改<br><code>git checkout</code> 用版本库里的版本替换工作区的版本<br><code>git reset HEAD file</code> 让暂存区的文件到工作区<br><code>git remote add origin git@github.com:liangbijie/-test01.git</code>  关联远程库<br><code>git push -u origin master</code>  将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br><code>git remote -v</code>  可以查看本地参考关联的远程仓库地址<br><code>git rm</code> 删除文件（+git commit 是删除远程仓库文件； +git checkout – file 误删还原（从远程仓库拉下来）   ）</p>
 <h2 id="Git常见问题">Git常见问题</h2><h3 id="Git添加文件需要add_和commit两步的原因：">Git添加文件需要add 和commit两步的原因：</h3><p>因为<code>commit</code>可以一次提交很多文件，所以我们可以多次<code>add</code>不同的文件</p>
 
       
@@ -248,7 +257,7 @@
   <p><span>本文标题:</span><a href="/2016/03/22/Git/">Git基础操作，满足你的项目需求</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
   <p><span>发布时间:</span>2016年03月22日 - 19时22分</p>
-  <p><span>最后更新:</span>2016年03月22日 - 19时35分</p>
+  <p><span>最后更新:</span>2016年03月31日 - 16时44分</p>
   <p>
     <span>原始链接:</span><a href="/2016/03/22/Git/" title="Git基础操作，满足你的项目需求">http://liangbijie.com/2016/03/22/Git/</a>
     <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2016/03/22/Git/　　作者: 梁弼杰" title="点击复制文章链接">
@@ -273,6 +282,12 @@
 
 
 <nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2016/03/23/fast01/">
+        JavaScript高性能&lt;一&gt;
+      </a>
+    </div>
   
   
     <div id="article-nav-older" class="article-nav-title">
@@ -380,14 +395,16 @@
 
   
   
+    
     <div  class="post-nav-button">
-    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/03/23/fast01/" title="上一篇: JavaScript高性能&lt;一&gt;">
+    <i class="fa fa-angle-left"></i>
+    </a>
     <a href="/2016/01/06/ajax-base-question/" title="下一篇: AJAX之一些基本问题的解决办法">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
-    
 
 
 

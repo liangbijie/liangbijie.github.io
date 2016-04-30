@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
     <!-- 下面一行意思是 梁弼杰的博客 -->
-  <title>Git基础操作，满足你的项目需求 | 梁弼杰的博客</title>
+  <title>HTML和CSS常见知识点 | 梁弼杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="导读：Git的一些常用命令，用来当做手册来查找">
+  <meta name="description" content="导读：本文列举了html和css常见的问题和答案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git基础操作，满足你的项目需求">
-<meta property="og:url" content="http://liangbijie.com/2016/03/22/Git/index.html">
+<meta property="og:title" content="HTML和CSS常见知识点">
+<meta property="og:url" content="http://liangbijie.com/2016/04/30/html-css/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
-<meta property="og:description" content="导读：Git的一些常用命令，用来当做手册来查找">
-<meta property="og:updated_time" content="2016-03-31T08:44:59.078Z">
+<meta property="og:description" content="导读：本文列举了html和css常见的问题和答案">
+<meta property="og:updated_time" content="2016-04-30T15:39:26.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git基础操作，满足你的项目需求">
-<meta name="twitter:description" content="导读：Git的一些常用命令，用来当做手册来查找">
+<meta name="twitter:title" content="HTML和CSS常见知识点">
+<meta name="twitter:description" content="导读：本文列举了html和css常见的问题和答案">
   
   
     <link rel="icon" href="/favicon.png">
@@ -196,11 +196,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Git" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-html-css" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/22/Git/" class="article-date">
-  	<time datetime="2016-03-22T11:22:11.000Z" itemprop="datePublished">2016-03-22</time>
+      <a href="/2016/04/30/html-css/" class="article-date">
+  	<time datetime="2016-04-30T15:38:19.000Z" itemprop="datePublished">2016-04-30</time>
 </a>
     </div>
   
@@ -213,7 +213,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git基础操作，满足你的项目需求
+      HTML和CSS常见知识点
     </h1>
   
 
@@ -224,7 +224,7 @@
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -234,18 +234,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p>导读：Git的一些常用命令，用来当做手册来查找<a id="more"></a></p>
-<h2 id="Git_常用命令">Git 常用命令</h2><p><code>mkdir</code> 创建一个文件夹<br><code>pwd</code>   显示当前目录<br><code>git init</code>  把当前目录变成git可以管理的仓库<br><code>ls -ah</code>  可以看到隐藏目录  如.git文件<br><code>git status</code>  让我们时刻掌握仓库当前的状态,可以随时掌握工作区的状态</p>
-<pre><code>$ git status
-<span class="keyword">On</span> branch master
-Your branch <span class="keyword">is</span> up-<span class="keyword">to</span>-<span class="built_in">date</span> <span class="keyword">with</span> <span class="comment">'origin/master'.</span>
-Changes <span class="keyword">to</span> be committed:
-  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)
-        modified:   src/.idea/workspace.xml
-        modified:   src/main/webapp/<span class="keyword">static</span>/js/page/user/userInfo.js
-</code></pre><p>这段话表示有两个文件被修改了</p>
-<p><code>git diff</code> 可以查看修改的内容(比较当前文件和暂存区文件差异)<br><code>git reset --hard HEAD^</code> 可以回退到上一个版本<br><code>git reflog</code> 记录每一次命令操作（可以用来查看命令历史，以便确定要回到未来的哪个版本）<br><code>git log</code>  可以看到每一次提交的版本<br><code>cat</code>   打开某一个文件<br><code>HEAD</code> 表示当前版本<br><code>HEAD^</code> 表示上一个版本<br><code>HEAD^^</code> 表示上上个版本<br><code>git reset --hard 3628164</code>  3628164表示版本号，通过git log可以看到版本号，版本号没必要写全，前几位就可以了，Git会自动去找<br><code>git checkout -- file</code>  丢弃工作区的修改<br><code>git checkout</code> 用版本库里的版本替换工作区的版本<br><code>git reset HEAD file</code> 让暂存区的文件到工作区<br><code>git remote add origin git@github.com:liangbijie/-test01.git</code>  关联远程库<br><code>git push -u origin master</code>  将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br><code>git remote -v</code>  可以查看本地参考关联的远程仓库地址<br><code>git rm</code> 删除文件（+git commit 是删除远程仓库文件； +git checkout – file 误删还原（从远程仓库拉下来）   ）</p>
-<h2 id="Git常见问题">Git常见问题</h2><h3 id="Git添加文件需要add_和commit两步的原因：">Git添加文件需要add 和commit两步的原因：</h3><p>因为<code>commit</code>可以一次提交很多文件，所以我们可以多次<code>add</code>不同的文件</p>
+        <p>导读：本文列举了html和css常见的问题和答案<a id="more"></a></p>
+<h1 id="HTML和CSS常见问题">HTML和CSS常见问题</h1><h3 id="position的值，_relative和absolute分别是相对于谁进行定位的？">position的值， relative和absolute分别是相对于谁进行定位的？</h3><ul>
+<li>absolute : 生成绝对定位的元素，相对<strong>最近</strong>的一级 定位<strong>不是static</strong>的<strong>父元素</strong>来进行定位，脱离文档流。</li>
+<li>relative：生成相对定位的元素，相对其在<strong>普通流</strong>中的位置进行定位。</li>
+<li>fixed：生成绝对定位的元素，通常相对于浏览器窗口或者<strong>frame</strong>进行定位。</li>
+<li>static：默认值，没有定位，元素出现在正常的流中。</li>
+<li>sticky：生成粘性定位的元素，容器的位置根据正常流计算得出。（需要继续了解！！！）<pre><code><span class="tag">sticky</span>定位解释：它的表现类似<span class="tag">position</span><span class="pseudo">:relative</span>和<span class="tag">position</span><span class="pseudo">:fixed</span>的合体，当目标区域在屏幕中可见时，它的行为就像<span class="tag">position</span><span class="pseudo">:relative</span>; 而当页面滚动超出目标区域时，它的表现就像<span class="tag">position</span><span class="pseudo">:fixed</span>，它会固定在目标位置。
+</code></pre></li>
+</ul>
+<h3 id="渐进增强和优雅降级">渐进增强和优雅降级</h3><p><strong>渐进增强</strong> ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+<p><strong>优雅降级</strong> ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<h3 id="display:none和visibility:hidden的区别">display:none和visibility:hidden的区别</h3><p><strong>display:none</strong>  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。（dom解决被删除，此时通过js找不到该元素）<br><strong>visibility:hidden</strong>  隐藏对应的元素，但是在文档布局中仍保留原来的空间。（dom节点依然存在）</p>
+<h3 id="CSS中link_和@import的区别">CSS中link 和@import的区别</h3><p>(1) link属于HTML标签，而@import是CSS提供的;(使用的地方不同)<br>(2) 页面被加载的时，link会同时被加载，而@import被引用的CSS会等到引用它的CSS文件被加载完再加载;(加载顺序不一样)<br>(3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题;(兼容性不一样)<br>(4) link方式的样式的权重 <strong>高于</strong>@import的权重.(权重不一样)</p>
+<h3 id="position:absolute和float属性的异同">position:absolute和float属性的异同</h3><p><strong>共同点</strong>：对内联元素设置float和absolute属性，可以让元素脱离文档流，并且可以设置其宽高。</p>
+<p><strong>不同点</strong>：float仍会占据位置，absolute会覆盖文档流中的其他元素。</p>
+<h3 id="CSS_选择符有哪些？">CSS 选择符有哪些？</h3><p>1.id选择器（ # myid）</p>
+<p> 2.类选择器（.myclassname）</p>
+<p> 3.标签选择器（div, h1, p）</p>
+<p> 4.相邻选择器（h1 + p）</p>
+<p> 5.子选择器（ul &gt; li）</p>
+<p> 6.后代选择器（li a）</p>
+<p> 7.通配符选择器（ * ）</p>
+<p> 8.属性选择器（a[rel = “external”]）</p>
+<p> 9.伪类选择器（a: hover, li:nth-child）</p>
+<h3 id="属性选择器优先级">属性选择器优先级</h3><p>!important &gt; 内联&gt;id &gt; class &gt; tag</p>
+<h3 id="说说你对语义化的理解？">说说你对语义化的理解？</h3><p>1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构 (优良结构)<br>2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；(seo)<br>3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；<br>4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。(维护)</p>
+<h3 id="Doctype作用?_严格模式与混杂模式如何区分？它们有何意义?">Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h3><p>1）、&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于 <html> 标签之前。告知浏览器以何种模式来渲染文档。<br>2）、严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。<br>3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。<br>4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</html></p>
 
       
     </div>
@@ -254,13 +269,13 @@ Changes <span class="keyword">to</span> be committed:
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2016/03/22/Git/">Git基础操作，满足你的项目需求</a></p>
+  <p><span>本文标题:</span><a href="/2016/04/30/html-css/">HTML和CSS常见知识点</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
-  <p><span>发布时间:</span>2016年03月22日 - 19时22分</p>
-  <p><span>最后更新:</span>2016年03月31日 - 16时44分</p>
+  <p><span>发布时间:</span>2016年04月30日 - 23时38分</p>
+  <p><span>最后更新:</span>2016年04月30日 - 23时39分</p>
   <p>
-    <span>原始链接:</span><a href="/2016/03/22/Git/" title="Git基础操作，满足你的项目需求">http://liangbijie.com/2016/03/22/Git/</a>
-    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2016/03/22/Git/　　作者: 梁弼杰" title="点击复制文章链接">
+    <span>原始链接:</span><a href="/2016/04/30/html-css/" title="HTML和CSS常见知识点">http://liangbijie.com/2016/04/30/html-css/</a>
+    <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2016/04/30/html-css/　　作者: 梁弼杰" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   <script src="/js/clipboard.min.js"></script>
@@ -283,16 +298,10 @@ Changes <span class="keyword">to</span> be committed:
 
 <nav id="article-nav">
   
-    <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2016/03/23/fast01/">
-        JavaScript高性能&lt;一&gt;
-      </a>
-    </div>
-  
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2016/01/06/ajax-base-question/">
-        AJAX之一些基本问题的解决办法
+      <a href="/2016/04/28/git_coding/">
+        如何用git、coding协同开发
       </a>
     </div>
   
@@ -305,7 +314,7 @@ Changes <span class="keyword">to</span> be committed:
 <!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
 <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git_常用命令"><span class="toc-number">1.</span> <span class="toc-text">Git 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git常见问题"><span class="toc-number">2.</span> <span class="toc-text">Git常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git添加文件需要add_和commit两步的原因："><span class="toc-number">2.1.</span> <span class="toc-text">Git添加文件需要add 和commit两步的原因：</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML和CSS常见问题"><span class="toc-number">1.</span> <span class="toc-text">HTML和CSS常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#position的值，_relative和absolute分别是相对于谁进行定位的？"><span class="toc-number">1.0.1.</span> <span class="toc-text">position的值， relative和absolute分别是相对于谁进行定位的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#渐进增强和优雅降级"><span class="toc-number">1.0.2.</span> <span class="toc-text">渐进增强和优雅降级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#display:none和visibility:hidden的区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">display:none和visibility:hidden的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS中link_和@import的区别"><span class="toc-number">1.0.4.</span> <span class="toc-text">CSS中link 和@import的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#position:absolute和float属性的异同"><span class="toc-number">1.0.5.</span> <span class="toc-text">position:absolute和float属性的异同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS_选择符有哪些？"><span class="toc-number">1.0.6.</span> <span class="toc-text">CSS 选择符有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性选择器优先级"><span class="toc-number">1.0.7.</span> <span class="toc-text">属性选择器优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说说你对语义化的理解？"><span class="toc-number">1.0.8.</span> <span class="toc-text">说说你对语义化的理解？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Doctype作用?_严格模式与混杂模式如何区分？它们有何意义?"><span class="toc-number">1.0.9.</span> <span class="toc-text">Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</span></a></li></ol></li></ol></li></ol>
 </div>
 <style type="text/css">
     .left-col .switch-btn {
@@ -359,7 +368,7 @@ Changes <span class="keyword">to</span> be committed:
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016/03/22/Git/" data-title="Git基础操作，满足你的项目需求" data-url="http://liangbijie.com/2016/03/22/Git/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/30/html-css/" data-title="HTML和CSS常见知识点" data-url="http://liangbijie.com/2016/04/30/html-css/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -395,16 +404,14 @@ Changes <span class="keyword">to</span> be committed:
 
   
   
-    
     <div  class="post-nav-button">
-    <a href="/2016/03/23/fast01/" title="上一篇: JavaScript高性能&lt;一&gt;">
-    <i class="fa fa-angle-left"></i>
-    </a>
-    <a href="/2016/01/06/ajax-base-question/" title="下一篇: AJAX之一些基本问题的解决办法">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/04/28/git_coding/" title="下一篇: 如何用git、coding协同开发">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
+    
 
 
 

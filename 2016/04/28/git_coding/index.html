@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://liangbijie.com/2016/04/28/git_coding/index.html">
 <meta property="og:site_name" content="梁弼杰的博客">
 <meta property="og:description" content="导读：本文讲了什么如何用git和coding进行协调开发">
-<meta property="og:updated_time" content="2016-04-28T08:58:37.693Z">
+<meta property="og:updated_time" content="2016-04-28T09:53:44.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用git、coding协同开发">
 <meta name="twitter:description" content="导读：本文讲了什么如何用git和coding进行协调开发">
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/作用域/" style="font-size: 10px;">作用域</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a> <a href="/tags/高性能JavaScript/" style="font-size: 10px;">高性能JavaScript</a>
+						<a href="/tags/AJAX/" style="font-size: 16.67px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 13.33px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mardown/" style="font-size: 10px;">mardown</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/作用域/" style="font-size: 10px;">作用域</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日报/" style="font-size: 10px;">日报</a> <a href="/tags/随笔/" style="font-size: 16.67px;">随笔</a> <a href="/tags/高性能JavaScript/" style="font-size: 10px;">高性能JavaScript</a>
 					</div>
 				</section>
 				
@@ -256,7 +256,7 @@ $ git config --global user<span class="class">.email</span> <span class="string"
 <h2 id="将本地仓库和coding仓库关联">将本地仓库和coding仓库关联</h2><h4 id="第1步：创建SSH_Key">第1步：创建SSH Key</h4><p>在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
 <pre><code><span class="variable">$ </span>ssh-keygen -t rsa -<span class="constant">C </span><span class="string">"youremail@example.com"</span>
 </code></pre><p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，<br>如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</p>
-<h4 id="第2步：登陆codding，打开“Account_settings”，“SSH_Keys”页面：">第2步：登陆codding，打开“Account settings”，“SSH Keys”页面：</h4><p>然后，点左边列表的“账户-》SSH公钥“，<br>填上任意公钥名称，在SSH-RSA公钥内容 粘贴id_rsa.pub文件的内容：<br>点击“添加”，ok，公钥添加成功！</p>
+<h4 id="第2步：登陆codding，打开“Account_settings”，“SSH_Keys”页面：">第2步：登陆codding，打开“Account settings”，“SSH Keys”页面：</h4><p>然后，点左边列表的“账户-》SSH公钥“，<br>填上任意公钥名称，在SSH-RSA公钥内容 粘贴id_rsa.pub文件的内容（用记事本、notepad++或者sublime打开）：<br>点击“添加”，ok，公钥添加成功！</p>
 <h4 id="第3步：建立连接">第3步：建立连接</h4><p>在管理员将你的账号加入到项目组中后，进入对应的项目组<br>点击左侧列表“代码-》SSH” 将SSH复制下来<br>打开我的电脑，进入你想存项目的地址下，”右键-》git bash here”<br>在命令框中输入 <code>git clone +你刚复制的内容</code> 回车确定,命令运行完成功后会在你的当前目录下多一个项目文件，这就表示克隆成功，此文件已经和线上仓库建立了联系。</p>
 <h4 id="第四步：提交代码">第四步：提交代码</h4><p>建立连接之后，我们接下来就可以把代码提交到仓库了<br>提交步骤：<br>1、首先在刚刚克隆下来的文件里面建立一个自己的文件夹，以自己的名字命名，并在里面添加一个txt文件（命名为“information”内容为自己的姓名，联系方式）<br>2、在刚刚克隆下的文件里面”右键-》git bash here”<br>3、输入 <code>git add .</code>  （用git管理该目录下的所有文件）<br>4、输入<code>git commit -m &quot;你的备注&quot;</code> (将本地代码提交到暂存区)<br>5、输入<code>git pull</code>  (将远程仓库的代码拉到本地仓库)<br>6、输入<code>git push</code> (将暂存区的代码提交到远程仓库)<br>ok了，完成这几步，就可以在coding网站相对应项目里面看到自己提交的文件和代码了。<br>以后交作业只需要将作业放到以自己名字命名下的文件夹里面 然后执行 3-6步骤。</p>
 <h2 id="git学习推荐资料">git学习推荐资料</h2><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰 git</a></p>
@@ -271,7 +271,7 @@ $ git config --global user<span class="class">.email</span> <span class="string"
   <p><span>本文标题:</span><a href="/2016/04/28/git_coding/">如何用git、coding协同开发</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梁弼杰 的个人博客">梁弼杰</a></p>
   <p><span>发布时间:</span>2016年04月28日 - 11时28分</p>
-  <p><span>最后更新:</span>2016年04月28日 - 16时58分</p>
+  <p><span>最后更新:</span>2016年04月28日 - 17时53分</p>
   <p>
     <span>原始链接:</span><a href="/2016/04/28/git_coding/" title="如何用git、coding协同开发">http://liangbijie.com/2016/04/28/git_coding/</a>
     <span class="btn" data-clipboard-text="原文: http://liangbijie.com/2016/04/28/git_coding/　　作者: 梁弼杰" title="点击复制文章链接">
@@ -296,6 +296,12 @@ $ git config --global user<span class="class">.email</span> <span class="string"
 
 
 <nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2016/04/30/html-css/">
+        HTML和CSS常见知识点
+      </a>
+    </div>
   
   
     <div id="article-nav-older" class="article-nav-title">
@@ -403,14 +409,16 @@ $ git config --global user<span class="class">.email</span> <span class="string"
 
   
   
+    
     <div  class="post-nav-button">
-    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/04/30/html-css/" title="上一篇: HTML和CSS常见知识点">
+    <i class="fa fa-angle-left"></i>
+    </a>
     <a href="/2016/03/31/作用域/" title="下一篇: 作用域&lt;一&gt;初始作用域">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
-    
 
 
 
